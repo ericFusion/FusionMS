@@ -1,0 +1,335 @@
+﻿/****************************************************
+	RX Review Joomla to SharePoint 2010 Masterpage
+	Author : Eric Barber
+	Start Date : 09/04/2012
+	End Date : N/A
+	Notes: May be used with homepage calling a seperate masterpage; has not been discussed.
+	Not tested in IE7-9, Chrome, Safari, Opera, and Firefox
+****************************************************/
+/*Base Style*/
+html,body{
+	background-color:#EEEEEE !important;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.900em; /*14px*/
+	color:#000000;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+}
+::selection {
+	background: #FAB060;/* Safari, Chrome */
+	}
+::-moz-selection {
+	background: #FAB060; /* Firefox */
+}
+/*End Base Style*/
+
+
+/*Ribbon*/
+#ribbon{
+	background-color:#21374C;	
+}
+/*End Ribbon*/
+
+
+/*Header*/
+#ctl00_onetidProjectPropertyTitleGraphic{
+	float:left;
+	margin:10px;
+}
+#linkbar .links img{
+	border:none;
+}
+#linkbar .links{
+	list-style-type:none;	
+	width: auto;
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+}
+#linkbar .links li{
+	display:inline;
+}
+/*End Header*/
+
+
+/*Top Navigation*/
+#s4-titlerow{
+	position:relative;
+	z-index:1;
+}
+#s4-titlerow .menu-horizontal a{
+	text-transform:uppercase;
+	padding:15px 0px 15px 0px;
+	margin:0px 5px 0px 10px;
+	text-decoration:none;
+}
+#s4-titlerow .menu-horizontal a:visited,#s4-titlerow .menu-horizontal a{
+	color:#666 !important;
+}
+#s4-titlerow .menu-horizontal a:hover{
+	color:#3BAA34;
+	border-bottom:4px solid green;
+}
+#s4-titlerow .menu ul.dynamic{
+	background-color:#DEDEDE;
+	z-index:500;
+}
+.menu-horizontal li.static:hover, .menu-horizontal a.static:hover, .menu-horizontal span.static:hover{
+	position:relative !important;
+	z-index:900;
+}
+#zz17_TopNavigationMenuV4 .menu-horizontal{
+	display:block; /*Site Settings fix*/
+}
+/*End Top Navigation*/
+
+
+/*Main Body & Container*/
+#s4-workspace{
+	/*
+	width:970px;
+	margin:0 auto;
+	background-image:url('/Style Library/RX/img/bg.png');
+	background-repeat:repeat-y;
+	*/
+}
+#container{
+	width:982px; /*needed for background*/
+	margin:0 auto;
+	background-image:url('/Style Library/RX/img/bg.png');
+	background-repeat:repeat-y;
+}
+body #s4-workspace{
+	overflow:auto;
+}
+body #MSO_ContentTable{
+	clear:both;
+	background-color:#FFFFFF;
+	width:960px;
+	margin:0 auto;
+}
+#s4-titlerow{
+	background-image:url('/Style Library/RX/img/header-bg.png');
+	background-position:0 100%;
+	background-repeat:repeat-x;
+	height:130px;
+	width:960px;
+	margin:0 auto;
+	background-color:#FFFFFF;
+}
+/*End Main Body & Container*/
+
+/*Dialog Box Specific*/
+html.ms-dialog body #MSO_ContentTable{
+	width:auto;
+	margin:auto;
+}
+html.ms-dialog body #container{
+	width:auto;
+	margin:auto;
+}
+/*End Dialog Box Specific*/
+
+/*Charts, Lists, Libraries Styles*/
+
+/*End Charts, Lists, Libraries Styles*/
+
+/*Web Parts*/
+.ms-sbtable-ex {
+ float:none;
+ margin:0 auto;
+}
+.ms-WPHeader{
+	border:2px solid;
+	border-color:#E3E3E3;
+	background:#F1F1F1;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	display:block;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+	clear:both; /*SharePoint IE issue*/
+	position:relative; /*SharePoint IE issue*/
+	width:97%; /*SharePoint IE issue*/
+	float:left; /*SharePoint IE issue*/
+	margin-left:0%; /*SharePoint IE issue*/
+}
+.ms-WPHeader:hover{
+	background-color:#999999;
+	border-color:#000000;
+}
+.ms-WPHeader:hover .ms-WPTitle{
+	color:#FFFFFF;
+}
+.ms-WPHeader td, .ms-fakewptitle{
+	border:0px;
+}
+.ms-wpcontentdivspace{
+	margin:20px 20px 0px 10px;
+}
+.ms-WPTitle, .ms-WPTitle a{
+	padding:15px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+	color:#555;
+	text-transform:uppercase;
+	font-size:16px;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+	margin-bottom:10px;
+}
+.ms-WPBorder, .ms-WPBorderBorderOnly{
+	border:0px;
+}
+/*End Web Parts*/
+
+
+/*Quick Panel/Left Navigation*/
+
+/*End Quick Panel/Left Navigation*/
+
+/*Search*/
+.s4-search input.ms-sbplain{
+	font-size:16px;
+	height:21px;
+}
+/*End Search*/
+
+
+/*Footer*/
+#footer{
+	background-color:#CCCCCC;
+	width:960px;
+	margin:0 auto;
+	overflow:auto;
+	padding-bottom:30px;
+}
+#footer a{
+	color:#325602;
+	transition:color 0.5s;
+	-webkit-transition:color 0.5s;
+	-moz-transition:color 0.5s;
+	-o-transition:color 0.5s;
+	font-size:16px;
+	border:none;
+}
+#footer img{
+	border:none;
+}
+#footer a:hover{
+	color:#5C5B5B;
+}
+#footer ul{
+	list-style-type:none;
+	padding-left:0;
+}
+.columns{
+	padding-top:30px;
+	width:90%;
+	margin:0 auto;
+}
+.leftcol{
+	float:left;
+	width:30%;
+	margin-left:5%;
+}
+.leftcol span,.rightcol span,.midcol span{
+	font-family:'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+	text-transform:uppercase;
+	color:#5C5B5B;
+	font-size:1.75em;
+	display:block;
+	margin:0 auto;
+}
+.leftcol li,.rightcol li{
+	margin:20px 0px  20px 0px;
+}
+#footer .midcol li a,#footer .rightcol li a {
+	display:block;
+	float:left;
+}
+.clear{
+	clear:both;
+}
+.linktext{
+	padding-top:10px;	
+}
+.midcol{
+	float:left;
+	width:30%;
+}
+.midcol a:nth-child(even){
+	text-transform:uppercase;
+	margin-top:-2px;
+	margin-left:5px;
+}
+.rightcol{
+	float:left;	
+	width:30%;
+	margin-right:5%;
+}
+.rightcol span:nth-child(2),.phone{
+	text-transform:none;
+	text-align:left;
+	font-size:16px !important;
+	font-weight:bold;
+	position:absolute;
+	margin-top:5px;
+	display:inline
+}
+.phone{
+	display:inline !important;
+	margin-top:5px;
+	font-size:16px !important;
+
+}
+.rightcol li a:nth-child(2),.contact{
+	margin-top:3px;
+}
+.contact{
+	margin-top:3px !important;
+}
+#footer p{
+	text-align:center;
+	color:#5C5B5B;
+	display: block;
+	float: left;
+	padding:10px;
+}
+/*End Footer*/
+
+
+/*SharePoint 2010 Overrides & Hides*/
+.s4-help{
+	display:none;
+}
+#leftpanel{
+	display:none;
+}
+.breadcrumb{
+	display:none;
+}
+.ms-titlerowborder{
+	border-right:0px;
+}
+#search{
+	display:none;
+}
+#ctl00_PlaceHolderSiteName_onetidProjectPropertyTitle{
+	display:none;
+}
+.ms-webpartpagedescription{
+	display:none;
+}
+.s4-titlesep{
+	display:none;
+}
+#names{
+	display:none;
+}
+/*End SharePoint 2010 Overrides & Hides*/

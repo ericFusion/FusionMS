@@ -1,0 +1,714 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<%@Master language="C#"%>
+<%@ Import Namespace="Microsoft.SharePoint" %>
+<%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" src="~/_controltemplates/Welcome.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="DesignModeConsole" src="~/_controltemplates/DesignModeConsole.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="MUISelector" src="~/_controltemplates/MUISelector.ascx" %>
+<%@ Register Tagprefix="PublishingWebControls" Namespace="Microsoft.SharePoint.Publishing.WebControls" Assembly="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="PublishingNavigation" Namespace="Microsoft.SharePoint.Publishing.Navigation" Assembly="Microsoft.SharePoint.Publishing, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Assembly Name="Microsoft.SharePoint.Portal, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register Tagprefix="MSSWC" Namespace="Microsoft.SharePoint.Portal.WebControls" Assembly="Microsoft.Office.Server.Search, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+
+<!-- =SharePoint Experts, Inc. - Reboot Master Page for SharePoint 2010 Publishing sites. Copyright 2010-2011 SharePoint Experts, Inc. and Heather Solomon. Distributed to the public for reference and educational purposes. Code may be used as long as this copyright message stays intact.
+-sharepointexperience.com
+
+COMMENTS GUIDE
+This master page is heavily commented. The comments provide labels and explanations for various SharePoint components.  There is also information indicating the purpose and need for IDs and CSS classes that are used for various elements. The comments follow a common structure and naming schema:
+
+When the start of a comment is formatted like so:   
+  =Component 
+The comment is in reference to the following code block.
+
+When the start of a comment includes a caret (^) like so:
+  ^ =Component
+The comment is in reference to the preceding tag. These comments are used as much as possible so when a code block is moved the comment(s) are included and moved as well.
+
+The comments are tagged with a category so you can quickly jump through the file by searching for the category name preceded by an equal(=) symbol.  The categories are:
+
+=Content Placeholder
+=Layout
+=Navigation
+=Page Data
+=Page Tools
+=Publishing
+=Ribbon
+=SharePoint 
+=Site Data
+=Temporary
+=Custom
+
+It is not necessary to keep the comments in your final master page file. 
+-->
+
+<html lang="<%$Resources:wss,language_value%>" dir="<%$Resources:wss,multipages_direction_dir_value%>" runat="server" xmlns:o="urn:schemas-microsoft-com:office:office" __expr-val-dir="ltr">
+
+<head runat="server">
+	<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+	<meta name="GENERATOR" content="Microsoft SharePoint"/>
+	<meta name="progid" content="SharePoint.WebPartPage.Document"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Expires" content="0"/>
+	<SharePoint:RobotsMetaTag runat="server"/>
+	
+	<!-- =SharePoint - Site Title -->
+		<title id="onetidTitle"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"/></title>
+	
+	<!-- =SharePoint - CSS -->
+		<!-- SharePoint CSS files and file set for the Alternate CSS for the site (if any) -->
+		<SharePoint:CssLink runat="server" Version="4"/>	
+
+	<!-- =SharePoint - Supporting file -->
+		<SharePoint:ULSClientConfig runat="server"/>
+
+	<!-- =SharePoint - ECMAScript variable 
+	  -Remove this script if you don't want the Ribbon to dock at the top of the page.
+	  -It is also emitted by SPWebPartManager below.
+	  -Removing this will cause the script to not be present during usual on-load events for the Ribbon and therefore can improve rendering performance. 
+	-->
+		<script type="text/javascript">
+			var _fV4UI = true;
+		</script>	
+
+	<!-- =SharePoint - Supporting files -->
+		<SharePoint:ScriptLink name="init.js" runat="server"/>
+		<SharePoint:CustomJSUrl runat="server"/>
+		<SharePoint:SoapDiscoveryLink runat="server"/>
+		<SharePoint:SPPageManager runat="server"/>
+		<SharePoint:SPHelpPageComponent Visible="false" runat="server"/>
+		<SharePoint:SPShortcutIcon runat="server" IconUrl="/_layouts/images/favicon.ico"/>
+		
+	<!-- =Custom - CSS -->	
+		<!-- CSS file linking options  - LINK or CssRegistration
+		-Use the LINK tag to link a CSS file; it will be loaded on every web page that uses this master page.
+		-Use CssRegistration to include your CSS file in the above SharePoint:CssLink control.
+		-Can use CssRegistration to reference CSS file(s) that include theming comments.
+		-Use SPUrl (publishing sites only) to create a fully flexible relative path that will resolve to the top site (~site) or site collection (~sitecollection).   Can be used in LINK or CssRegistration.
+		
+		-PATH OPTIONS
+		-Store the CSS in the content database in the Style Library (/Style Library/CUSTOM FOLDER OPTIONAL/INSERT_PATH.css).
+		-Store the CSS file on the web server in the STYLES directory (/_layouts/1033/styles/CUSTOM FOLDER OPTIONAL/INSERT_PATH.css).
+		-Store themable CSS files in the Themeable directory either in the Style Library or the web server (/Style Library/en-us/Themable/INSERT_PATH.css   or  /_layouts/1033/styles/themable/INSERT_PATH.css).
+		-->
+		<!-- LINK tag sample -->
+			<link rel="stylesheet" type="text/css" href="/Style Library/INSERT_PATH.css" />
+		<!-- LINK tag sample that uses SPUrl (publishing only) -->
+			<link rel="stylesheet" type="text/css" href="<% $SPUrl:~sitecollection/Style Library/INSERT_PATH.css%>" />
+		<!-- CssRegistration sample -->
+			<SharePoint:CssRegistration name="/Style Library/INSERT_PATH.css"  After="corev4.css" runat="server"/>
+
+	<!-- =Content Placeholder - adds body styles, must be stored in HEAD element -->
+		<asp:ContentPlaceHolder id="PlaceHolderBodyAreaClass" runat="server"/>
+	<!-- =Content Placeholder - adds title area styles, must be stored in HEAD element -->
+		<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" runat="server"/>
+	<!-- =Content Placeholder - allows for content page/page layout additions of CSS and scripts, must be stored in HEAD element -->
+		<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server"/>	 
+	<!-- =SharePoint - allows for HEAD element modifications via custom control, must be stored in the HEAD element -->
+		<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true"/>
+		
+</head>
+<!-- =Layout - Body tag
+  -Set scroll to "no" if you want the Ribbon docked at the top of the browser window. 
+  -Keep "v4master" CSS class if you want the Ribbon docked at the top of the browser window.
+  -Must add height, width and overflow properties set in v4master to the body either through v4master class addition or by adding the properties to your custom body class in order for the modal dialog windows to auto generate their sizing correctly.
+  -->
+<body scroll="no" onload="if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();" class="v4master">
+
+<!-- =SharePoint - Leave the following in place -->
+<form runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
+<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="true" EnableScriptLocalization="true" />
+<WebPartPages:SPWebPartManager runat="Server"/>
+
+<!-- =SharePoint - Accessibility Controls -->
+	<span id="TurnOnAccessibility" style="display:none" class="s4-notdlg">
+		<a id="linkTurnOnAcc" href="#" class="ms-TurnOnAcc" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;">
+	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnonaccessibility%>" EncodeMethod="HtmlEncode"/></a>
+	</span>
+	<span id="TurnOffAccessibility" style="display:none" class="s4-notdlg">
+		<a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;">
+	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnoffaccessibility%>" EncodeMethod="HtmlEncode"/></a>
+	</span>
+	<span class="s4-notdlg s4-skipribbonshortcut">
+		<a href="javascript:;" onclick="javascript:this.href='#startNavigation';" class="ms-SkiptoNavigation" accesskey="<%$Resources:wss,skipribbon_accesskey%>" runat="server">
+	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,skipRibbonCommandsLink%>" EncodeMethod="HtmlEncode"/></a>
+	</span>
+	<span class="s4-notdlg">
+		<a href="javascript:;" onclick="javascript:this.href='#mainContent';" class="ms-SkiptoMainContent" accesskey="<%$Resources:wss,maincontent_accesskey%>" runat="server">
+	<SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,mainContentLink%>" EncodeMethod="HtmlEncode"/></a>
+	</span>
+	<a id="HiddenAnchor" href="javascript:;" style="display:none;"></a>
+
+
+<!-- =Temporary - Custom Design and Development 
+-Insert your code here and move SharePoint components into your code. Be sure to move any wrapper content placeholders and/or DIVs along with the SharePoint component.
+-Move any unused SharePoint components to the hidden ASP Panel at the bottom of the this file.
+-Add a class of s4-notdlg to any element that you do not want to display in a modal dialog window. 
+-->
+
+<!-- =SharePoint - allows for page modifications via custom control -->
+<SharePoint:DelegateControl runat="server" ControlId="GlobalNavigation"/>
+
+<div style="background: black" class="s4-notdlg">
+<!-- ^ =Temporary - Wrapper DIV 
+-Shows the following components with a dark background as their default styling renders white text.
+-s4-notdlg CSS class added to stop contents showing in dialog window during development. 
+-This DIV may be removed. 
+-->
+
+	<!-- =Navigation - Personal Actions ('Welcome User') Menu 
+	-Not required.
+	-->
+	<wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false"></wssuc:Welcome>
+	
+	<!-- =Navigation - Variation Labels menu 
+	-Not required.
+	-->
+	<SharePoint:DelegateControl runat="server" ControlId="GlobalSiteLink0"/>
+	
+	<!-- =Navigation - My Links menu 
+	-Not required.
+	-->
+	<SharePoint:DelegateControl ControlId="GlobalSiteLink2" ID="GlobalDelegate2" Scope="Farm" runat="server" />
+
+	<!-- =Navigation - Multi-lingual User Interface menu 
+	-Not required.
+	-->
+	<wssuc:MUISelector ID="IdMuiSelector" runat="server"/>
+	
+	<!-- =SharePoint - Developer Dashboard -->
+	<Sharepoint:DeveloperDashboardLauncher
+		ID="DeveloperDashboardLauncher"
+		NavigateUrl="javascript:ToggleDeveloperDashboard()"
+		runat="server"
+		ImageUrl="/_layouts/images/fgimg.png"
+		Text="<%$Resources:wss,multipages_launchdevdashalt_text%>"
+		OffsetX="0"
+		OffsetY="222"
+		Height="16"
+		Width="16" />
+
+	<span class="ms-siteactionsmenu" id="siteactiontd">
+	<!-- ^ =Navigation - Site Actions
+	-Reorder items by changing 'MenuGroupId' and 'Sequence'.
+	-'Text' is the Site Actions item title and 'Description' is the descriptive text listed under the title.
+	-->
+		<SharePoint:SiteActions runat="server" accesskey="<%$Resources:wss,tb_SiteActions_AK%>" id="SiteActionsMenuMain"
+			PrefixHtml=""
+			SuffixHtml=""
+			MenuNotVisibleHtml="&amp;nbsp;">
+				<CustomTemplate>
+					<SharePoint:FeatureMenuTemplate runat="server"
+						FeatureScope="Site"
+						Location="Microsoft.SharePoint.StandardMenu"
+						GroupId="SiteActions"
+						UseShortId="true">
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_EditPage"
+							Text="<%$Resources:wss,siteactions_editpage%>"
+							Description="<%$Resources:wss,siteactions_editpagedescriptionv4%>"
+							ImageUrl="/_layouts/images/ActionsEditPage.png"
+							MenuGroupId="100"
+							Sequence="110"
+							ClientOnClickNavigateUrl="javascript:ChangeLayoutMode(false);"/>
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_TakeOffline"
+							Text="<%$Resources:wss,siteactions_takeoffline%>"
+							Description="<%$Resources:wss,siteactions_takeofflinedescription%>"
+							ImageUrl="/_layouts/images/connecttospworkspace32.png"
+							MenuGroupId="100"
+							Sequence="120"
+							/>
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreatePage"
+							Text="<%$Resources:wss,siteactions_createpage%>"
+							Description="<%$Resources:wss,siteactions_createpagedesc%>"
+							ImageUrl="/_layouts/images/NewContentPageHH.png"
+							MenuGroupId="200"
+							Sequence="210"
+							UseShortId="true"
+							ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('Page')) { OpenCreateWebPageDialog('~site/_layouts/createwebpage.aspx') }"
+							PermissionsString="AddListItems, EditListItems"
+							PermissionMode="All" />
+						<!-- =Navigation - Site Actions - New Document Library -->
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreateDocLib"
+							Text="<%$Resources:wss,siteactions_createdoclib%>"
+							Description="<%$Resources:wss,siteactions_createdoclibdesc%>"
+							ImageUrl="/_layouts/images/NewDocLibHH.png"
+							MenuGroupId="200"
+							Sequence="220"
+							UseShortId="true"
+							ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('DocLib')) { GoToPage('~site/_layouts/new.aspx?FeatureId={00bfea71-e717-4e80-aa17-d0c71b360101}&amp;ListTemplate=101') }"
+							PermissionsString="ManageLists"
+							PermissionMode="Any"
+							VisibilityFeatureId="00BFEA71-E717-4E80-AA17-D0C71B360101" />
+						<!-- =Navigation - Site Actions - New Site -->
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CreateSite"
+							Text="<%$Resources:wss,siteactions_createsite%>"
+							Description="<%$Resources:wss,siteactions_createsitedesc%>"
+							ImageUrl="/_layouts/images/newweb32.png"
+							MenuGroupId="200"
+							Sequence="230"
+							UseShortId="true"
+							ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('Site')) { STSNavigate('~site/_layouts/newsbweb.aspx') }"
+							PermissionsString="ManageSubwebs,ViewFormPages"
+							PermissionMode="All" />
+						<!-- =Navigation - Site Actions - More Options -->
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_Create"
+							Text="<%$Resources:wss,siteactions_create%>"
+							Description="<%$Resources:wss,siteactions_createdesc%>"
+							MenuGroupId="200"
+							Sequence="240"
+							UseShortId="true"
+							ClientOnClickScriptContainingPrefixedUrl="if (LaunchCreateHandler('All')) { STSNavigate('~site/_layouts/create.aspx') }"
+							PermissionsString="ManageLists, ManageSubwebs"
+							PermissionMode="Any" />
+						<!-- =Navigation - Site Actions - View All Site Content -->
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_ViewAllSiteContents"
+							Text="<%$Resources:wss,quiklnch_allcontent%>"
+							Description="<%$Resources:wss,siteactions_allcontentdescription%>"
+							ImageUrl="/_layouts/images/allcontent32.png"
+							MenuGroupId="300"
+							Sequence="302"
+							UseShortId="true"
+							ClientOnClickNavigateUrl="~site/_layouts/viewlsts.aspx"
+							PermissionsString="ViewFormPages"
+							PermissionMode="Any" />
+						<!-- =Navigation - Site Actions - Edit in SharePoint Designer -->
+						 <SharePoint:MenuItemTemplate runat="server" id="MenuItem_EditSite"
+							Text="<%$Resources:wss,siteactions_editsite%>"
+							Description="<%$Resources:wss,siteactions_editsitedescription%>"
+							ImageUrl="/_layouts/images/SharePointDesigner32.png"
+							MenuGroupId="300"
+							Sequence="304"
+							UseShortId="true"
+							ClientOnClickScriptContainingPrefixedUrl="EditInSPD('~site/',true);"
+							PermissionsString="AddAndCustomizePages"
+							PermissionMode="Any"/>
+						<!-- =Navigation - Site Actions - Site Permissions -->
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_SitePermissions"
+							Text="<%$Resources:wss,people_sitepermissions%>"
+							Description="<%$Resources:wss,siteactions_sitepermissiondescriptionv4%>"
+							ImageUrl="/_layouts/images/Permissions32.png"
+							MenuGroupId="300"
+							Sequence="310"
+							UseShortId="true"
+							ClientOnClickNavigateUrl="~site/_layouts/user.aspx"
+							PermissionsString="EnumeratePermissions"
+							PermissionMode="Any" />
+						<!-- =Navigation - Site Actions - Site Settings -->
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_Settings"
+							Text="<%$Resources:wss,settings_pagetitle%>"
+							Description="<%$Resources:wss,siteactions_sitesettingsdescriptionv4%>"
+							ImageUrl="/_layouts/images/settingsIcon.png"
+							MenuGroupId="300"
+							Sequence="320"
+							UseShortId="true"
+							ClientOnClickNavigateUrl="~site/_layouts/settings.aspx"
+							PermissionsString="EnumeratePermissions,ManageWeb,ManageSubwebs,AddAndCustomizePages,ApplyThemeAndBorder,ManageAlerts,ManageLists,ViewUsageData"
+							PermissionMode="Any" />
+						<SharePoint:MenuItemTemplate runat="server" id="MenuItem_CommitNewUI"
+							Text="<%$Resources:wss,siteactions_commitnewui%>"
+							Description="<%$Resources:wss,siteactions_commitnewuidescription%>"
+							ImageUrl="/_layouts/images/visualupgradehh.png"
+							MenuGroupId="300"
+							Sequence="330"
+							UseShortId="true"
+							ClientOnClickScriptContainingPrefixedUrl="GoToPage('~site/_layouts/prjsetng.aspx')"
+							PermissionsString="ManageWeb"
+							PermissionMode="Any"
+							ShowOnlyIfUIVersionConfigurationEnabled="true" />
+					</SharePoint:FeatureMenuTemplate>
+				</CustomTemplate>
+	  	</SharePoint:SiteActions>
+	</span>
+
+	<asp:ContentPlaceHolder id="PlaceHolderGlobalNavigation" runat="server">
+	<!-- =Navigation - Global - Breadcrumb Popout/Hierarchy Tree -->
+		<SharePoint:PopoutMenu
+			runat="server"
+			ID="GlobalBreadCrumbNavPopout"
+			IconUrl="/_layouts/images/fgimg.png"
+			IconAlt="<%$Resources:wss,master_breadcrumbIconAlt%>"
+			IconOffsetX="0"
+			IconOffsetY="112"
+			IconWidth="16"
+			IconHeight="16"
+			AnchorCss="s4-breadcrumb-anchor"
+			AnchorOpenCss="s4-breadcrumb-anchor-open"
+			MenuCss="s4-breadcrumb-menu"
+			Visible="true">	
+			<div class="s4-breadcrumb-top">
+			<!-- ^ =Navigation - Global - Breadcrumb Popout/Hierarchy Tree - Starting label in dropdown -->
+				<asp:Label runat="server" CssClass="s4-breadcrumb-header" Text="<%$Resources:wss,master_breadcrumbHeader%>" />
+			</div>
+			<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server">
+					<!-- =Navigation - Global - Breadcrumb Popout/Hierarchy Tree - Menu in dropdown -->
+				<SharePoint:ListSiteMapPath
+					runat="server"
+					SiteMapProviders="CurrentNavigation"
+					RenderCurrentNodeAsLink="false"
+					PathSeparator=""
+					CssClass="s4-breadcrumb"
+					NodeStyle-CssClass="s4-breadcrumbNode"
+					CurrentNodeStyle-CssClass="s4-breadcrumbCurrentNode"
+					RootNodeStyle-CssClass="s4-breadcrumbRootNode"
+					NodeImageOffsetX="0"
+					NodeImageOffsetY="353"
+					NodeImageWidth="16"
+					NodeImageHeight="16"
+					NodeImageUrl="/_layouts/images/fgimg.png"
+					HideInteriorRootNodes="true"
+					SkipLinkText="" />
+			</asp:ContentPlaceHolder>
+		</SharePoint:PopoutMenu>
+	</asp:ContentPlaceHolder>
+
+<!-- =Temporary - END DIV to stop contents from showing in dialog window -->
+</div>
+
+<div id="s4-ribbonrow" class="s4-pr s4-ribbonrowhidetitle">
+<!-- ^ =Ribbon Block 
+  -The s4-ribbonrow DIV ID is mandatory and must be kept for the ECMAScript logic (Ribbon) so the Ribbon will function; also used for modal dialog box styles.
+  -It is not recommended to add anything within the Ribbon container below as the height is set using static values that will not adjust to additional content. 
+  -->
+	<div id="s4-ribboncont">
+		<!-- =Ribbon - Control -->
+		<SharePoint:SPRibbon runat="server" PlaceholderElementId="RibbonContainer" CssFile="">
+			<SharePoint:SPRibbonPeripheralContent
+				runat="server"
+				Location="TabRowLeft"
+				CssClass="ms-siteactionscontainer s4-notdlg">
+					<!-- =Ribbon - Page state icon that displays when in Edit mode (Edit/Save) -->
+					<SharePoint:PageStateActionButton id="PageStateActionButton" runat="server" Visible="false" />
+			</SharePoint:SPRibbonPeripheralContent>
+		</SharePoint:SPRibbon>
+	</div>	
+	
+	<!-- =Ribbon - Notification area under Ribbon -->
+	<div id="notificationArea" class="s4-noti"></div>
+	
+	<asp:ContentPlaceHolder ID="SPNavigation" runat="server">
+		<!-- =Publishing - Enables publishing features on Publish tab in Ribbon -->
+		<SharePoint:DelegateControl runat="server" ControlId="PublishingConsole" Id="PublishingConsoleDelegate"></SharePoint:DelegateControl>
+	</asp:ContentPlaceHolder>
+	
+	<div id="WebPartAdderUpdatePanelContainer">
+	<!-- ^ =Page Tools - Add Web Parts Panel -->
+		<asp:UpdatePanel
+			ID="WebPartAdderUpdatePanel"
+			UpdateMode="Conditional"
+			ChildrenAsTriggers="false"
+			runat="server">
+			<ContentTemplate>
+				<WebPartPages:WebPartAdder ID="WebPartAdder" runat="server" />
+			</ContentTemplate>
+			<Triggers>
+				<asp:PostBackTrigger ControlID="WebPartAdder" />
+			</Triggers>
+		</asp:UpdatePanel>
+	</div>
+<!-- =Ribbon END -->
+</div>	
+
+<div id="s4-workspace">
+<!-- ^ =Layout - Workspace Container  - DO NOT DELETE
+  -The  above DIV and DIV ID is mandatory and must be kept for the ECMAScript logic (Ribbon) IF you want the Ribbon docked at the top of the browser window.
+  -Creates scrollable area when Ribbon is enabled. 
+  -Used to set up modal dialog box sizing.
+  -The s4-workspace ID is referenced in many SharePoint script files.
+  -s4-nosetwidth class should be added to this DIV if the web page design is a fixed width design or includes a right/left margin for the entire web page.
+  -->
+	<div id="s4-bodyContainer">
+	<!-- ^ =Layout - Body Container - DO NOT DELETE
+	  -The above DIV and s4-bodyContainer DIV ID is mandatory and must be kept for the ECMAScript logic (Ribbon) IF you want the Ribbon docked at the top of the browser window.
+	  -s4-bodyContainer ID is used to create proper modal dialog box scrollbars and widths.
+	  -Used to determine width of the page.
+	  -->	  
+	  	<div id="s4-titlerow" class="s4-pr s4-notdlg s4-titlerowhidetitle">
+		<!-- ^ =Ribbon - Title Area Container (Browse tab in ribbon) 
+		  -Not a mandatory inclusion; if removed the Ribbon will continue to function and the elements below (usually title, header, search, etc.) will just appear under the Ribbon at all times.
+		  -s4-notdlg CSS class is stopping contents from displaying in dialog windows.
+		-->		
+			<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/" id="onetidProjectPropertyTitleGraphic">
+			<!-- ^ =Site Data - Site logo -->
+				<SharePoint:SiteLogoImage name="onetidHeadbnnr0" id="onetidHeadbnnr2" LogoImageUrl="/_layouts/images/siteIcon.png" runat="server"/>
+			</SharePoint:SPLinkButton>
+										
+			<asp:ContentPlaceHolder id="PlaceHolderSiteName" runat="server">
+			<!-- ^ =Site Data - Site title -->
+				<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/" id="onetidProjectPropertyTitle"><SharePoint:ProjectProperty Property="Title" runat="server" /></SharePoint:SPLinkButton>
+			</asp:ContentPlaceHolder>	
+
+			<span id="onetidPageTitleSeparator" class="s4-nothome s4-bcsep s4-titlesep">
+			<!-- ^ =Page Tools - Separator Arrow Image -->
+				<SharePoint:ClusteredDirectionalSeparatorArrow runat="server"/> 
+			</span>									
+
+			<!-- =Page Data - Page title -->
+			<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
+
+			<!-- =Page Data - Page description-->
+			<asp:ContentPlaceHolder id="PlaceHolderPageDescription" runat="server"/>
+			
+			<!-- =Page Tools - Social Data icons 
+			-Two different sizes are available. Do not need both.
+			-Not required.
+			-->
+			<!-- Large -->
+			<SharePoint:DelegateControl ControlId="GlobalSiteLink3" Scope="Farm" runat="server"/>
+			<!-- Small -->
+			<SharePoint:DelegateControl ControlId="GlobalSiteLink3-mini" Scope="Farm" runat="server" />
+						
+			<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server">
+			<!-- ^ =Page Tools - Search - Content placeholder and control -->
+				<SharePoint:DelegateControl runat="server" ControlId="SmallSearchInputBox" Version="4"/>
+			</asp:ContentPlaceHolder>
+			
+			<span class="s4-help">
+			<!-- ^ =Page Tools - Help icon -->
+				<span style="height:17px;width:17px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust">hi<a href="#" style="height:17px;width:17px;display:inline-block;" onclick="TopHelpButtonClick('HelpHome');return false" accesskey="<%$Resources:wss,multipages_helplink_accesskey%>" id="TopHelpLink" title="<%$Resources:wss,multipages_helplinkalt_text%>" runat="server"><img src="/_layouts/images/fgimg.png" alt="<%$Resources:wss,multipages_helplinkalt_text%>" style="left:-0px !important;top:-309px !important;position:absolute;" align="absmiddle" border="0" runat="server" /></a></span>
+			</span>
+			
+			<!-- =Navigation - Keep with main navigation to maintain fast browsing for accessibility. -->
+			<a name="startNavigation"></a>	
+			
+			<asp:ContentPlaceHolder id="PlaceHolderTopNavBar" runat="server">
+			<!-- ^ =Navigation - Top Nav (Global Navigation) - Top Nav Bar Content Placeholder -->
+				<asp:ContentPlaceHolder id="PlaceHolderHorizontalNav" runat="server">
+				<!-- ^ =Navigation - Top Nav (Global Navigation) - Horizontal Nav Content Placeholder -->			
+					<!-- =Navigation - Top Nav (Global Navigation) - AspMenu
+					-Different SP master pages use various IDs and DataSourceIDs; these can be switched out based on needs.
+					-->
+					<SharePoint:AspMenu 
+						ID="GlobalNav" 
+						runat="server" 
+						DataSourceID="SiteMapDataSource1"
+						UseSimpleRendering="true" 
+						Orientation="Horizontal" 
+						EncodeTitle="false"
+						StaticDisplayLevels="1" 
+						MaximumDynamicDisplayLevels="1"
+						CssClass="top-nav-menu band-menu" 
+						SkipLinkText="<%$Resources:cms,masterpages_skiplinktext%>"/>
+					<PublishingNavigation:PortalSiteMapDataSource 
+						ID="siteMapDataSource1" 
+						runat="server"
+						SiteMapProvider="GlobalNavigation" 
+						EnableViewState="true"
+						StartFromCurrentNode="true" 
+						StartingNodeOffset="0" 
+						ShowStartingNode="false"
+						TreatStartingNodeAsCurrent="true" 
+						TrimNonCurrentTypes="Heading"/>	
+				</asp:ContentPlaceHolder>
+			</asp:ContentPlaceHolder>
+		<!-- =Ribbon - Title Area Container END -->
+		</div>
+		
+		<!-- =Page Tools - Edit Mode - Status Bar 
+		-#pageStatusBar DIV is needed to display Status Bar.
+		-->
+		<div id="pageStatusBar" class="s4-status-s1"></div>		
+		
+		<!-- =Navigation - Breadcrumb -->
+		<asp:SiteMapPath
+			runat="server"
+			SiteMapProviders="SPSiteMapProvider,SPXmlContentMapProvider"
+			RenderCurrentNodeAsLink="false"
+			NodeStyle-CssClass="breadcrumbNode"
+			CurrentNodeStyle-CssClass="breadcrumbCurrentNode"
+			RootNodeStyle-CssClass="breadcrumbRootNode"
+			HideInteriorRootNodes="true"
+			SkipLinkText=""/>
+		
+		<div id="MSO_ContentTable">
+		<!-- ^ =Page Data - Main Content 
+		-Keep the MSO_ContentTable ID, it is referenced in many SharePoint script files and is used for web parts.
+		-->		
+			<div id="MSO_ContentDiv" runat="server">
+			<!-- ^ =Page Tools - Web Part Tool Pane
+			-Keep the MSO_ContentDiv ID, it sets up the Web Part Tool Pane.
+			-->
+				<a name="mainContent"></a>
+				<!-- =Content Placeholder - Large content block -->
+				<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server"/>
+			</div>						
+		</div>			
+	
+		<div class="s4-notdlg">
+		<!-- ^ =Temporary 
+		-Added to stop contents showing in dialog window during development. 
+		-This DIV may be removed. 
+		-->
+		
+			<!-- =Content Placeholder - Left navigation bar data source -->
+			<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarDataSource" runat="server" />
+			<!-- =Content Placeholder - Date picker when calendar is active -->
+			<asp:ContentPlaceHolder id="PlaceHolderCalendarNavigator" runat="server" />
+			<!-- =Content Placeholder - Wiki Nav -->
+			<asp:ContentPlaceHolder id="PlaceHolderWikiNavigator" runat="server" />
+			<!-- =Content Placeholder - Additional objects -->
+			<asp:ContentPlaceHolder id="PlaceHolderLeftActions" runat="server"/>
+			<!-- =Content Placeholder - Area above Quick Launch -->
+			<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarTop" runat="server"/>
+
+			<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server">
+			<!-- ^ =Content Placeholder - Quick Launch (Current Navigation) -->
+			<!-- =Navigation - Quick Launch Menu 
+			-Different SP master pages use various IDs and DataSourceIDs. These can be switched out based on needs.
+			-->
+				<SharePoint:AspMenu 
+					ID="CurrentNav" 
+					runat="server" 
+					DataSourceID="SiteMapDS"
+					UseSeparateCSS="false" 
+					UseSimpleRendering="true" 
+					Orientation="Vertical" 
+					StaticDisplayLevels="2" 
+					MaximumDynamicDisplayLevels="1"
+					CssClass="band-menu" 
+					SkipLinkText="<%$Resources:cms,masterpages_skiplinktext%>"/>
+				<PublishingNavigation:PortalSiteMapDataSource 
+					ID="SiteMapDS" 
+					runat="server"
+					SiteMapProvider="CurrentNavigation" 
+					EnableViewState="true"
+					StartFromCurrentNode="true" 
+					StartingNodeOffset="0" 
+					ShowStartingNode="false"
+					TrimNonCurrentTypes="Heading"/>
+			
+			<!-- =Navigation - Tree View - Menu Display -->
+				<Sharepoint:SPNavigationManager
+					id="TreeViewNavigationManagerV4"
+					runat="server"
+					ContainedControl="TreeView"
+					CssClass="s4-treeView">
+					<SharePoint:SPLinkButton 
+						runat="server" 
+						NavigateUrl="~site/_layouts/viewlsts.aspx" 
+						id="idNavLinkSiteHierarchyV4" 
+						Text="<%$Resources:wss,treeview_header%>" 
+						accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>" 
+						CssClass="s4-qlheader" />
+						<div class="ms-treeviewouter">
+							<SharePoint:DelegateControl runat="server" ControlId="TreeViewAndDataSource">
+								<Template_Controls>
+									<SharePoint:SPHierarchyDataSourceControl
+										 runat="server"
+										 id="TreeViewDataSourceV4"
+										 RootContextObject="Web"
+										 IncludeDiscussionFolders="true"/>
+									<SharePoint:SPRememberScroll 
+										runat="server" 
+										id="TreeViewRememberScrollV4" 
+										onscroll="javascript:_spRecordScrollPositions(this);" 
+										style="overflow: auto;height: 400px;width: 155px; ">
+										  <Sharepoint:SPTreeView
+											id="WebTreeViewV4"
+											runat="server"
+											ShowLines="false"
+											DataSourceId="TreeViewDataSourceV4"
+											ExpandDepth="0"
+											SelectedNodeStyle-CssClass="ms-tvselected"
+											NodeStyle-CssClass="ms-navitem"
+											SkipLinkText=""
+											NodeIndent="12"
+											ExpandImageUrl="/_layouts/images/tvclosed.png"
+											ExpandImageUrlRtl="/_layouts/images/tvclosedrtl.png"
+											CollapseImageUrl="/_layouts/images/tvopen.png"
+											CollapseImageUrlRtl="/_layouts/images/tvopenrtl.png"
+											NoExpandImageUrl="/_layouts/images/tvblank.gif">
+										</Sharepoint:SPTreeView>
+									</Sharepoint:SPRememberScroll>
+								</Template_Controls>
+							</SharePoint:DelegateControl>
+						</div>
+				</Sharepoint:SPNavigationManager>	
+				
+				<asp:ContentPlaceHolder id="PlaceHolderQuickLaunchBottom" runat="server">
+				<!-- ^ =Content Placeholder - Area below Quick Launch -->
+					<ul class="s4-specialNavLinkList">
+						<li>
+							<!-- =Navigation - Recycle Bin - Link 
+							-Not required.
+							-->
+							<SharePoint:ClusteredSPLinkButton
+								runat="server"
+								NavigateUrl="~site/_layouts/recyclebin.aspx"
+								ImageClass="s4-specialNavIcon"
+								ImageUrl="/_layouts/images/fgimg.png"
+								ImageWidth="16"
+								ImageHeight="16"
+								OffsetX="0"
+								OffsetY="428"
+								id="idNavLinkRecycleBin"
+								Text="<%$Resources:wss,StsDefault_RecycleBin%>"
+								CssClass="s4-rcycl"
+								PermissionsString="DeleteListItems"/>
+						</li>
+						<li>
+							<!-- =Navigation - All Site Content - Link
+							-Not required.
+							-->
+							<SharePoint:ClusteredSPLinkButton
+								id="idNavLinkViewAllV4"
+								runat="server"
+								PermissionsString="ViewFormPages"
+								NavigateUrl="~site/_layouts/viewlsts.aspx"
+								ImageClass="s4-specialNavIcon"
+								ImageUrl="/_layouts/images/fgimg.png"
+								ImageWidth="16"
+								ImageHeight="16"
+								OffsetX="0"
+								OffsetY="0"
+								Text="<%$Resources:wss,quiklnch_allcontent_short%>"
+								accesskey="<%$Resources:wss,quiklnch_allcontent_AK%>"/>
+						</li>
+					</ul>
+				</asp:ContentPlaceHolder>
+			<!-- =Content Placeholder - END Quick Launch (Current Navigation) -->
+			</asp:ContentPlaceHolder>
+			
+		<!-- =Temporary - END DIV to stop contents from showing in dialog window -->
+		</div>
+		
+		<SharePoint:DeveloperDashboard runat="server"/>
+	<!-- =Layout - END Body Container -->
+	</div>	
+<!-- =Layout - END Workspace Container -->
+</div>
+
+<!-- =SharePoint - Hidden Components -->
+<asp:Panel visible="false" runat="server">
+	<!-- PLACE UNUSED CONTENT PLACEHOLDERS, CONTROLS, NAV, ETC. HERE -->
+
+	<!-- Marked as required for backwards compatibility only but still used in OOTB publishing page layouts and must remain in master page -->
+	<asp:ContentPlaceHolder id="PlaceHolderNavSpacer" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderBodyRightMargin" runat="server"/>
+	<!-- Added in addition to identified CPH needed for publishing pages.  The following are necessary if the master page will be used on other page types. -->
+	<asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderPageImage" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderTitleRightMargin" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderMiniConsole" runat="server" />
+	<asp:ContentPlaceHolder id="PlaceHolderLeftNavBarBorder" runat="server" />
+
+</asp:Panel>
+
+<!-- =SharePoint - Leave below items intact -->
+<!-- Inserts security validation within form -->
+<asp:ContentPlaceHolder id="PlaceHolderFormDigest" runat="server">
+	<SharePoint:FormDigest runat="server"/>
+</asp:ContentPlaceHolder>
+</form>
+<!-- Added content beneath closing FORM tag -->
+<asp:ContentPlaceHolder id="PlaceHolderUtilityContent" runat="server"/>
+
+<!--
+SharePoint Experts, Inc. 
+-sharepointexperience.com
+-->
+
+</body>
+</html>
