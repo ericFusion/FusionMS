@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" %>
+<%@ Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %> <%@ Register Tagprefix="Utilities" Namespace="Microsoft.SharePoint.Utilities" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %> <%@ Import Namespace="Microsoft.SharePoint" %> <%@ Assembly Name="Microsoft.Web.CommandUI, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Import Namespace="Microsoft.SharePoint.ApplicationPages" %>
+<%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
+<%@ Register TagPrefix="wssuc" TagName="Welcome" src="~/_controltemplates/Welcome.ascx" %>
+<%@ Register TagPrefix="wssuc" TagName="MUISelector" src="~/_controltemplates/MUISelector.ascx" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="<%$Resources:wss,language_value%>" xmlns:o="urn:schemas-microsoft-com:office:office" runat="server" dir="<%$Resources:wss,multipages_direction_dir_value%>" __expr-val-dir="ltr">
+<head runat="server">
+	<meta http-equiv="X-UA-Compatible" content="IE=8"/>
+	<meta name="GENERATOR" content="Microsoft SharePoint"/>
+	<meta name="progid" content="SharePoint.WebPartPage.Document"/>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta http-equiv="Expires" content="0"/>
+	<SharePoint:RobotsMetaTag runat="server" __designer:Preview="" __designer:Values="&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl00' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<title id="onetidTitle"><asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server"/></title>
+	<SharePoint:CssLink runat="server" Alternate="true" __designer:Preview="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/_layouts/1033/styles/Themable/layouts.css&quot;/&gt;
+&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/_layouts/1033/styles/Themable/minimalv4.css&quot;/&gt;
+" __designer:Values="&lt;P N='Alternate' T='True' /&gt;&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl01' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:Theme runat="server" __designer:Preview="" __designer:Values="&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl02' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:CssRegistration Name="minimalv4.css" runat="server" __designer:Preview="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/_layouts/1033/styles/Themable/minimalv4.css&quot;/&gt;
+" __designer:Values="&lt;P N='Name' T='minimalv4.css' /&gt;&lt;P N='EnableCssTheming' T='True' /&gt;&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl03' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:CssRegistration Name="layouts.css" runat="server" __designer:Preview="&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;/_layouts/1033/styles/Themable/layouts.css&quot;/&gt;
+" __designer:Values="&lt;P N='Name' T='layouts.css' /&gt;&lt;P N='EnableCssTheming' T='True' /&gt;&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl04' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:ULSClientConfig runat="server" __designer:Preview="" __designer:Values="&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl05' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:ScriptLink language="javascript" name="core.js" OnDemand="true" runat="server" __designer:Preview="&lt;script type=&quot;text/javascript&quot;&gt;
+// &lt;![CDATA[
+document.write('&lt;script type=&quot;text/javascript&quot; src=&quot;/_layouts/1033/init.js?rev=BjQJs0OCQh3Zfydsdw2MYw%3D%3D&quot;&gt;&lt;/' + 'script&gt;');
+// ]]&gt;
+&lt;/script&gt;
+" __designer:Values="&lt;P N='Name' T='core.js' /&gt;&lt;P N='OnDemand' T='True' /&gt;&lt;P N='Language' T='javascript' /&gt;&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl06' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:CustomJSUrl runat="server" __designer:Preview="" __designer:Values="&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl07' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:SoapDiscoveryLink runat="server" __designer:Preview="&lt;link type=&quot;text/xml&quot; rel=&quot;alternate&quot; href=&quot;/_vti_bin/spsdisco.aspx&quot; /&gt;" __designer:Values="&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl08' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<asp:ContentPlaceHolder id="PlaceHolderAdditionalPageHead" runat="server"/>
+	<SharePoint:DelegateControl runat="server" ControlId="AdditionalPageHead" AllowMultipleControls="true" __designer:Preview="[ MyLinksRibbon &quot;ctl00_ctl10&quot; ]
+
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;/_controltemplates/SPRibbonVisibility/jquery-1.4.2.min.js&quot;&gt;&lt;/script&gt;
+
+[ SpellCheckV4Action &quot;ctl00_ctl12&quot; ][ InsertMediaRibbonButton &quot;ctl00_ctl13&quot; ]" __designer:Values="&lt;P N='ControlId' T='AdditionalPageHead' /&gt;&lt;P N='AllowMultipleControls' T='True' /&gt;&lt;P N='ID' T='ctl09' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:SPShortcutIcon runat="server" IconUrl="/_layouts/images/favicon.ico" __designer:Preview="&lt;link rel=&quot;shortcut icon&quot; href=&quot;/_layouts/images/favicon.ico&quot; type=&quot;image/vnd.microsoft.icon&quot; /&gt;" __designer:Values="&lt;P N='IconUrl' T='/_layouts/images/favicon.ico' /&gt;&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl14' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<SharePoint:SPHelpPageComponent Visible="false" runat="server" __designer:Preview="&lt;span&gt;&lt;/span&gt;" __designer:Values="&lt;P N='Visible' T='False' /&gt;&lt;P N='ID' T='ctl15' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+</head>
+<body onload="javascript:if (typeof(_spBodyOnLoadWrapper) != 'undefined') _spBodyOnLoadWrapper();">
+	<form runat="server" onsubmit="if (typeof(_spFormOnSubmitWrapper) != 'undefined') {return _spFormOnSubmitWrapper();} else {return true;}">
+	<asp:ScriptManager id="ScriptManager" runat="server" EnablePageMethods="false" EnablePartialRendering="true" EnableScriptGlobalization="false" EnableScriptLocalization="true" />
+	<WebPartPages:SPWebPartManager id="m" runat="Server"/>
+	<SharePoint:FormDigest runat="server" __designer:Preview="&lt;input type=&quot;hidden&quot; name=&quot;__REQUESTDIGEST&quot; value=&quot;0xA537340FAB6CDD4959C77EC581EB16D5262D47490F172A8BC8D35193BD1711A69649A62FB0423F1545BCF7791CA48CEA77F41732D8441556194F6B38FC969130,05 Jun 2013 14:15:27 -0000&quot; /&gt;" __designer:Values="&lt;P N='InDesign' T='False' /&gt;&lt;P N='ID' T='ctl16' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	<span id="TurnOnAccessibility" style="display:none" class="s4-notdlg">
+		<a id="linkTurnOnAcc" href="#" class="ms-TurnOnAcc" onclick="SetIsAccessibilityFeatureEnabled(true);UpdateAccessibilityUI();document.getElementById('linkTurnOffAcc').focus();return false;"><SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnonaccessibility%>" EncodeMethod="HtmlEncode" __designer:Preview="Turn on more accessible mode" __designer:Values="&lt;P N='Text' Bound='True' T='Resources:wss,master_turnonaccessibility' /&gt;&lt;P N='ID' T='ctl17' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/></a>
+	</span>
+	<span id="TurnOffAccessibility" style="display:none" class="s4-notdlg">
+		<a id="linkTurnOffAcc" href="#" class="ms-TurnOffAcc" onclick="SetIsAccessibilityFeatureEnabled(false);UpdateAccessibilityUI();document.getElementById('linkTurnOnAcc').focus();return false;"><SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,master_turnoffaccessibility%>" EncodeMethod="HtmlEncode" __designer:Preview="Turn off more accessible mode" __designer:Values="&lt;P N='Text' Bound='True' T='Resources:wss,master_turnoffaccessibility' /&gt;&lt;P N='ID' T='ctl18' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/></a>
+	</span>
+	<span class="s4-notdlg">
+		<a href="javascript:;" onclick="javascript:this.href='#mainContent';" class="ms-SkiptoMainContent" accesskey="<%$Resources:wss,maincontent_accesskey%>" runat="server"><SharePoint:EncodedLiteral runat="server" text="<%$Resources:wss,mainContentLink%>" EncodeMethod="HtmlEncode" __designer:Preview="Skip to main content" __designer:Values="&lt;P N='Text' Bound='True' T='Resources:wss,mainContentLink' /&gt;&lt;P N='ID' T='ctl19' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/></a>
+	</span>
+	<a id="HiddenAnchor" href="javascript:;" style="display:none;"></a>
+	<asp:ContentPlaceHolder ID="SPNavigation" runat="server">
+	</asp:ContentPlaceHolder>
+	<div id="s4-mini-header" class="s4-pr s4-notdlg">
+		<div class="s4-rp">
+			<div id="notificationArea" class="s4-mini-noti"></div>
+			<SharePoint:DelegateControl ControlId="GlobalSiteLink3-mini" Scope="Farm" runat="server" __designer:Preview="&lt;span style=&quot;display:none&quot;&gt;&lt;/span&gt;" __designer:Values="&lt;P N='ControlId' T='GlobalSiteLink3-mini' /&gt;&lt;P N='Scope' T='Farm' /&gt;&lt;P N='ID' T='ctl20' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+			<asp:ContentPlaceHolder id="PlaceHolderHelpButton" runat="server">
+				<div class="ms-mini-trcHelp">
+					<span style="height:17px;width:17px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust"><a href="#" style="height:17px;width:17px;display:inline-block;" onclick="TopHelpButtonClick('NavBarHelpHome');return false" accesskey="<%$Resources:wss,multipages_helplink_accesskey%>" id="TopHelpLink" title="<%$Resources:wss,multipages_helplinkalt_text%>" runat="server"><img src="/_layouts/images/fgimg.png" alt="<%$Resources:wss,multipages_helplinkalt_text%>" style="left:-0px !important;top:-309px !important;position:absolute;" align="absmiddle" border="0" runat="server" /></a></span>
+				</div>
+			</asp:ContentPlaceHolder>
+			<asp:ContentPlaceHolder id="PlaceHolderWelcomeMenu" runat="server">
+				<div class="lb ms-mini-trcMenu">
+					<wssuc:Welcome id="IdWelcome" runat="server" EnableViewState="false" __designer:Preview="
+	 
+	&lt;span style=&quot;display:none&quot;&gt;&lt;menu type='ServerMenu' id=&quot;zz1_ID_PersonalActionMenu&quot; largeiconmode=&quot;true&quot;&gt;&lt;ie:menuitem id=&quot;zz2_ID_PersonalInformation&quot; type=&quot;option&quot; iconSrc=&quot;/_layouts/images/menuprofile.gif&quot; onMenuClick=&quot;javascript:GoToPage('\u002f_layouts\u002fuserdisp.aspx?Force=True\u0026ID=' + _spUserId);return false;&quot; menuGroupId=&quot;100&quot;&gt;&lt;/ie:menuitem&gt;
+&lt;ie:menuitem id=&quot;zz3_ID_LoginAsDifferentUser&quot; type=&quot;option&quot; onMenuClick=&quot;javascript:LoginAsAnother('\u002f_layouts\u002fcloseConnection.aspx?loginasanotheruser=true', 0)&quot; menuGroupId=&quot;200&quot;&gt;&lt;/ie:menuitem&gt;
+&lt;ie:menuitem id=&quot;zz4_ID_RequestAccess&quot; type=&quot;option&quot; onMenuClick=&quot;STSNavigate2(event,'/_layouts/reqacc.aspx?type=list&amp;amp;name=%7B5EC9DAFE%2D24C4%2D4C15%2DBAE8%2DE2D01EE1D9E5%7D');&quot; menuGroupId=&quot;200&quot;&gt;&lt;/ie:menuitem&gt;
+&lt;ie:menuitem id=&quot;zz5_ID_Logout&quot; type=&quot;option&quot; onMenuClick=&quot;STSNavigate2(event,'/_layouts/SignOut.aspx');&quot; menuGroupId=&quot;200&quot;&gt;&lt;/ie:menuitem&gt;
+&lt;/menu&gt;&lt;/span&gt;&lt;span  id=&quot;zz6_Menu_t&quot; class=&quot;ms-SPLink ms-SpLinkButtonInActive ms-welcomeMenu&quot; title=&quot;Open Menu&quot; onmouseover=&quot;MMU_PopMenuIfShowing(this);MMU_EcbTableMouseOverOut(this, true)&quot; hoveractive=&quot;ms-SPLink ms-SpLinkButtonActive ms-welcomeMenu&quot; hoverinactive=&quot;ms-SPLink ms-SpLinkButtonInActive ms-welcomeMenu&quot; onclick=&quot; CoreInvoke('MMU_Open',byid(''), MMU_GetMenuFromClientId('zz6_Menu'),event,false, null, 0); return false;&quot; foa=&quot;MMU_GetMenuFromClientId('zz6_Menu')&quot; oncontextmenu=&quot;ClkElmt(this); return false;&quot; style=&quot;white-space:nowrap&quot;&gt;&lt;a class=&quot;ms-menu-a&quot; id=&quot;zz6_Menu&quot; accesskey=&quot;W&quot; href=&quot;javascript:;&quot; style=&quot;cursor:pointer;white-space:nowrap;&quot; onfocus=&quot;MMU_EcbLinkOnFocusBlur(byid(''), this, true);&quot; onkeydown=&quot;MMU_EcbLinkOnKeyDown(byid(''), MMU_GetMenuFromClientId('zz6_Menu'), event);&quot; onclick=&quot; CoreInvoke('MMU_Open',byid(''), MMU_GetMenuFromClientId('zz6_Menu'),event,false, null, 0); return false;&quot; oncontextmenu=&quot;ClkElmt(this); return false;&quot; menutokenvalues=&quot;MENUCLIENTID=zz6_Menu,TEMPLATECLIENTID=zz1_ID_PersonalActionMenu&quot; serverclientid=&quot;zz6_Menu&quot;&gt;&lt;span&gt;Eric Barber&lt;/span&gt;&lt;img src=&quot;/_layouts/images/blank.gif&quot; style='border:0px' alt=&quot;Use SHIFT+ENTER to open the menu (new window).&quot;/&gt;&lt;/a&gt;&lt;span style=&quot;height:3px;width:5px;position:relative;display:inline-block;overflow:hidden;&quot; class=&quot;s4-clust ms-viewselector-arrow&quot;&gt;&lt;img src=&quot;/_layouts/images/fgimg.png&quot; alt=&quot;Open Menu&quot; style=&quot;border-width:0px;position:absolute;left:-0px !important;top:-491px !important;&quot; /&gt;&lt;/span&gt;&lt;/span&gt;&lt;script type=&quot;text/javascript&quot;&gt;
+//&lt;![CDATA[
+var _spUserId=2;
+//]]&gt;
+&lt;/script&gt;
+&lt;a id=&quot;IdWelcome_ExplicitLogin&quot; Href=&quot;_controltemplates/http://poc.mwc.ms/_layouts/Authenticate.aspx&quot; style=&quot;display:none&quot;&gt;Sign In&lt;/a&gt;
+" __designer:Values="&lt;P N='ID' ID='1' T='IdWelcome' /&gt;&lt;P N='EnableViewState' T='False' /&gt;&lt;P N='TemplateControl' R='0' /&gt;">
+					</wssuc:Welcome>
+					<wssuc:MUISelector runat="server" __designer:Preview="
+&lt;script type =&quot;text/javascript&quot;&gt;
+// &lt;![CDATA[
+function OnSelectionChange(value)
+{
+	var today = new Date();
+	var oneYear = new Date(today.getTime() + 365 * 24 * 60 * 60 * 1000);
+	var url = window.location.href;
+	document.cookie = &quot;lcid=&quot; + value + &quot;;path=/;expires=&quot; + oneYear.toGMTString();
+	window.location.href = url;
+}
+// ]]&gt;
+&lt;/script&gt;
+&lt;select name=&quot;ctl00$DdLanguages&quot; id=&quot;ctl00_DdLanguages&quot; onchange=&quot;javascript:OnSelectionChange(this.value);&quot;&gt;
+&lt;/select&gt;
+" __designer:Values="&lt;P N='TemplateControl' R='0' /&gt;"/>
+				</div>
+			</asp:ContentPlaceHolder>
+			<SharePoint:DelegateControl ControlId="GlobalSiteLink2-mini" Scope="Farm" runat="server" __designer:Preview="&lt;span style=&quot;display:none&quot;&gt;&lt;/span&gt;" __designer:Values="&lt;P N='ControlId' T='GlobalSiteLink2-mini' /&gt;&lt;P N='Scope' T='Farm' /&gt;&lt;P N='ID' T='ctl22' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+			<asp:ContentPlaceHolder id="PlaceHolderDeveloperDashboardLauncher" runat="server">
+				<span class="s4-devdashboard">
+					<Sharepoint:DeveloperDashboardLauncher
+						ID="DeveloperDashboardLauncher"
+						NavigateUrl="javascript:ToggleDeveloperDashboard()"
+						runat="server"
+						ImageUrl="/_layouts/images/fgimg.png"
+						Text="<%$Resources:wss,multipages_launchdevdashalt_text%>"
+						OffsetX=0
+						OffsetY=222
+						Height=16
+						Width=16 __designer:Preview="&lt;span style=&quot;height:16px;width:16px;position:relative;display:inline-block;overflow:hidden;&quot; class=&quot;s4-clust&quot;&gt;&lt;a id=&quot;ctl00_DeveloperDashboardLauncher&quot; Href=&quot;javascript:ToggleDeveloperDashboard()&quot; style=&quot;display:inline-block;height:16px;width:16px;&quot;&gt;&lt;img src=&quot;/_layouts/images/fgimg.png&quot; alt=&quot;Launch the Developer Dashboard&quot; style=&quot;border:0;position:absolute;left:-0px !important;top:-222px !important;&quot; /&gt;&lt;/a&gt;&lt;/span&gt;" __designer:Values="&lt;P N='ID' T='DeveloperDashboardLauncher' /&gt;&lt;P N='OffsetY' T='222' /&gt;&lt;P N='ImageUrl' T='/_layouts/images/fgimg.png' /&gt;&lt;P N='NavigateUrl' T='javascript:ToggleDeveloperDashboard()' /&gt;&lt;P N='Text' Bound='True' T='Resources:wss,multipages_launchdevdashalt_text' /&gt;&lt;P N='Height' T='16px' /&gt;&lt;P N='Width' T='16px' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+				</span>
+			</asp:ContentPlaceHolder>
+		</div>
+		<div id="s4-mini-titlearea" class="s4-lp">
+			<SharePoint:DelegateControl ControlId="MinimalMasterSiteLogo" Scope="Web" runat="server" __designer:Preview="
+					&lt;a id=&quot;ctl00_onetidProjectPropertyTitleGraphic&quot; class=&quot;s4-mini-sitelogo-a&quot; href=&quot;/&quot;&gt;
+						&lt;img id=&quot;ctl00_onetidHeadbnnr0&quot; class=&quot;s4-mini-sitelogo&quot; Src=&quot;/_layouts/images/siteIcon.png&quot; alt=&quot;POC&quot; style=&quot;border-width:0px;&quot; /&gt;
+					&lt;/a&gt;
+				" __designer:Values="&lt;P N='ControlId' T='MinimalMasterSiteLogo' /&gt;&lt;P N='Scope' T='Web' /&gt;&lt;P N='ID' T='ctl23' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;">
+				<Template_Controls>
+					<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/" id="onetidProjectPropertyTitleGraphic" CssClass="s4-mini-sitelogo-a">
+						<SharePoint:SiteLogoImage id="onetidHeadbnnr0" LogoImageUrl="/_layouts/images/siteIcon.png" runat="server" CssClass="s4-mini-sitelogo" />
+					</SharePoint:SPLinkButton>
+				</Template_Controls>
+			</SharePoint:DelegateControl>
+			<h1 class="s4-mini-header">
+				<asp:ContentPlaceHolder id="PlaceHolderSiteName" runat="server">
+					<SharePoint:SPLinkButton runat="server" NavigateUrl="~site/" id="onetidProjectPropertyTitle" CssClass="s4-mini-h1-a" __designer:Preview="&lt;a id=&quot;ctl00_onetidProjectPropertyTitle&quot; class=&quot;s4-mini-h1-a&quot; href=&quot;/&quot;&gt;
+						POC&lt;/a&gt;" __designer:Values="&lt;P N='NavigateUrl' T='~site/' /&gt;&lt;P N='PermissionsString' T='EmptyMask' /&gt;&lt;P N='CssClass' T='s4-mini-h1-a' /&gt;&lt;P N='ID' T='onetidProjectPropertyTitle' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;">
+						<SharePoint:ProjectProperty Property="Title" runat="server" /></SharePoint:SPLinkButton>
+				</asp:ContentPlaceHolder>
+			</h1>
+			<SharePoint:ClusteredDirectionalImage
+				runat="server"
+				ImageUrl="/_layouts/images/fgimg.png"
+				LTROffsetX=0
+				RTLOffsetX=0
+				LTROffsetY=607
+				RTLOffsetY=618
+				LTRWidth=11
+				LTRHeight=11
+				RTLWidth=11
+				RTLHeight=11
+				AlternateText=":"
+				ClassName="s4-mini-titlesep" __designer:Preview="&lt;span style=&quot;height:11px;width:11px;position:relative;display:inline-block;overflow:hidden;&quot; class=&quot;s4-clust s4-mini-titlesep&quot;&gt;&lt;img Src=&quot;/_layouts/images/fgimg.png&quot; alt=&quot;:&quot; style=&quot;border-width:0px;position:absolute;left:-0px !important;top:-607px !important;&quot; /&gt;&lt;/span&gt;" __designer:Values="&lt;P N='ImageUrl' T='/_layouts/images/fgimg.png' /&gt;&lt;P N='LTROffsetY' T='607' /&gt;&lt;P N='RTLOffsetY' T='618' /&gt;&lt;P N='OffsetY' T='607' /&gt;&lt;P N='LTRWidth' T='11px' /&gt;&lt;P N='RTLWidth' T='11px' /&gt;&lt;P N='Width' T='11px' /&gt;&lt;P N='LTRHeight' T='11px' /&gt;&lt;P N='RTLHeight' T='11px' /&gt;&lt;P N='Height' T='11px' /&gt;&lt;P N='ClassName' T='s4-mini-titlesep' /&gt;&lt;P N='AlternateText' T=':' /&gt;&lt;P N='ID' T='ctl27' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+			<h2 class="s4-mini-header">
+				<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server" />
+			</h2>
+			<h3 class="s4-mini-header">
+				<asp:ContentPlaceHolder id="PlaceHolderPageSubTitle" runat="server" />
+			</h3>
+		</div>
+	</div>
+	<div>
+		<asp:ContentPlaceHolder id="PlaceHolderTitleBreadcrumb" runat="server" />
+	</div>
+	<div id="maincontent" class="s4-pr">
+		<asp:ContentPlaceHolder id="PlaceHolderMain" runat="server" />
+	</div>
+	<div style="display:none;">
+		<asp:ContentPlaceHolder id="PlaceHolderLeftNavBar" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderNavSpacer" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderBodyLeftBorder" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderPageImage" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderTitleLeftBorder" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderSearchArea" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderTitleAreaClass" runat="server" />
+		<asp:ContentPlaceHolder id="PlaceHolderTitleAreaSeparator" runat="server" />
+	</div>
+	<div id="DeveloperDashboard" class="ms-developerdashboard">
+		<SharePoint:DeveloperDashboard runat="server" __designer:Preview="[ DeveloperDashboard &quot;Unnamed22&quot; ]" __designer:Values="&lt;P N='ID' T='ctl28' /&gt;&lt;P N='Page' ID='1' /&gt;&lt;P N='TemplateControl' ID='2' /&gt;&lt;P N='AppRelativeTemplateSourceDirectory' R='-1' /&gt;"/>
+	</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,179 @@
+﻿
+/*SharePoint Masterpage reconfiguration*/
+#mobile{
+display:block;
+}
+
+body #s4-leftpanel{
+display:none;
+}
+
+#s4-titlerow{
+display:none;
+}
+
+.s4-ca{
+margin-left:0px;
+width:100%;
+border:0px;
+}
+
+.breadcrumbs {
+background-color: #737373;
+overflow: auto;
+height: 40px;
+padding-top: 10px;
+width: 100%;
+}
+
+body #s4-ribbonrow{
+display:none;
+}
+
+body #s4-workspace {
+margin-top: 53px;
+}
+
+/*Begin menu CSS*/
+
+#phoneNavigation,#phoneMenu{
+display:block;
+z-index: 9999999;
+}
+
+#phoneLoader{
+display:block;
+width:100%;
+background-color: rgba(0, 0, 0, 0.7);
+position:absolute;
+top:-200px;
+height:200px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+z-index:999999999999999;
+}
+
+#phoneLoader h1 {
+color: white;
+display:block;
+margin:0 auto;
+text-align:center;
+margin-top:65px;
+}
+
+
+
+#phoneNavigation{
+width:100%;
+background-color:rgb(238, 230, 230);
+border-bottom: 3px solid rgb(111, 87, 87);
+height: 50px;
+position:fixed;
+top:0;
+}
+
+.phoneTitle{
+margin: 0 auto;
+display: block;
+text-align: center;
+font-size: 0em;
+margin-top: 10px;
+color: white;
+margin-top: -36px;
+width: 139px;
+background-image: url('http://poc.mwc.ms/Style Library/Macys/img/macys_logo.png');
+height: 31px;
+border: 2px solid black;
+}
+
+#phoneMenuButton{
+height:20px;
+width:20px;
+margin: 7px;
+padding: 5px;
+cursor:pointer;
+background-image:url('/Style Library/Macys/img/menuButton.png');
+background-repeat:no-repeat;
+background-position:center center;
+}
+
+#phoneMenuButton:hover{
+cursor:pointer;
+}
+
+#phoneMenu{
+position:fixed;
+top:51px;
+left:-400px;
+height:100%;
+width:30%;
+background-color: #333;
+border-right: 2px solid #000;
+background-image: -webkit-linear-gradient( right, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 25% );
+background-image: -moz-linear-gradient( right, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 25% );
+background-image: -o-linear-gradient( right, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 25% );
+background-image: -ms-linear-gradient( right, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 25% );
+background-image: linear-gradient( right, rgba(0,0,0,.5) 0%, rgba(0,0,0,0) 25% );
+overflow:scroll;
+}
+
+#phoneMenu a{
+	color:#aaa;
+}
+
+#phoneMenu a:hover{
+	color:#ccc;
+}
+
+#phoneMenu ul{
+margin:0px;
+padding:0px;
+list-style-type:none;
+}
+
+#phoneMenu ul li{
+border-bottom: 1px solid rgba(255,255,255,.2);
+color: #aaa;
+display: block;
+padding: 0.5em 0.0em 0.5em 0.0em;
+cursor:pointer;
+}
+
+#phoneMenu ul li:hover{
+background-color: rgba(100,100,100,.35);
+}
+
+.itemWrapper{
+display:none;
+text-align:right;
+margin-right:5px;
+}
+
+#phoneMenu ul li ul li:hover{
+background-color:transparent;
+}
+
+#phoneMenu ul li ul li{
+font-size:12px;	
+border-bottom:0px;
+border-top:1px solid rgba(255,255,255,.2);
+
+}
+
+.item{
+color:white;
+}
+
+.title{
+color:blue;
+}
+
+.title span{
+margin-left:5px;
+}
+
+#navigation{
+	height:auto;
+	display:none;
+}
+

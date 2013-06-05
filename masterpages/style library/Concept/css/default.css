@@ -1,0 +1,376 @@
+﻿
+/* ------ general
+-----------------------------------------------*/
+
+#content {
+margin:0 auto;
+width:auto;
+}
+
+.info {
+float:left;
+width:100%;
+margin:20px 0;
+padding-bottom:20px;
+border-bottom:1px solid #353535;
+color:#000;
+position:relative;
+}
+
+.info h1 {
+font-family:'Playball', serif;
+font-size:77px;
+font-weight:normal;
+margin:0;
+margin-bottom:20px;
+}
+
+.info p {
+float:left;
+margin:0;
+margin-bottom:6px;
+}
+
+.info .demo {
+position:absolute;
+top:45px;
+right:0;
+}
+
+.info .demo a {
+display:inline-block;
+margin-left:10px;
+font-weight:bold;
+}
+
+
+
+/* ------ filtrey
+-----------------------------------------------*/
+
+.filters {
+float:left;
+clear:both;
+width:1000px;
+}
+
+.filters .filter {
+float:left;
+clear:both;
+width:960px;
+padding:20px;
+margin-bottom:20px;
+background:#545454;
+background: rgba(20, 123, 143, 0.44);
+}
+
+.filters .filter a {
+float:left;
+display:block;
+padding:5px;
+margin-right:20px;
+font-size:11px;
+text-transform:uppercase;
+outline:none;
+}
+
+.filters .filter .active {
+background:rgb(238, 172, 33);
+color:#111;
+}
+
+.filters .container {
+float:left;
+clear:both;
+width:100%;
+position:relative;
+}
+
+.filters .container ul,
+.filters .container ul li {
+display:block;
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.filters .container ul li {
+float:left;
+margin:0 8px 8px 0;
+font-size:0;
+line-height:0;
+}
+
+.filters .container a {
+display:block;
+float:left;
+width:192px;
+height:192px;
+}
+
+
+
+a:visited {
+color:#eee;
+text-decoration:none;
+}
+
+.toys{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/toys.png');
+}
+
+.toys:hover{
+background-image:url('/Style Library/Concept/i/assets/toys_h.png');
+}
+
+.lloyd{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/leon.png');
+}
+
+.lloyd:hover{
+background-image:url('/Style Library/Concept/i/assets/leon_h.png');
+}
+
+.trade{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/trade.png');	
+}
+
+.trade:hover{
+background-image:url('/Style Library/Concept/i/assets/trade_h.png');	
+}
+
+.nov{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/nov.png');
+}
+
+.nov:hover{
+background-image:url('/Style Library/Concept/i/assets/nov_h.png');
+}
+
+.macy{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/macys.png');	
+}
+
+.macy:hover{
+background-image:url('/Style Library/Concept/i/assets/macys_h.png');	
+}
+
+.wops{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/wops.png');
+}
+
+.wops:hover{
+background-image:url('/Style Library/Concept/i/assets/wops_h.png');
+}
+
+.leon{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/leon.png');
+}
+
+.leon:hover{
+background-image:url('/Style Library/Concept/i/assets/leon_h.png');
+}
+
+.fusionpub{
+display:block;
+height:200px;
+width:200px;
+background-image:url('/Style Library/Concept/i/assets/fusionpub.png');
+}
+
+.fusionpub:hover{
+background-image:url('/Style Library/Concept/i/assets/fusionpub_h.png');
+}
+
+.comp{
+background-image:url('/Style Library/Concept/i/assets/com.png');
+}
+
+.comp:hover{
+background-image:url('/Style Library/Concept/i/assets/com_h.png');
+}
+
+.fusionteam{
+background-image:url('/Style Library/Concept/i/assets/fusionteam.png');
+}
+
+.fusionteam:hover{
+background-image:url('/Style Library/Concept/i/assets/fusionteam_h.png');
+}
+
+.ten{
+background-image:url('/Style Library/Concept/i/assets/ten.png');
+}
+
+.ten:hover{
+background-image:url('/Style Library/Concept/i/assets/ten_h.png');
+}
+
+.cloud{
+background-image:url('/Style Library/Concept/i/assets/cloud.png');
+}
+
+.cloud:hover{
+background-image:url('/Style Library/Concept/i/assets/cloud_h.png');
+}
+
+.actionpub{
+background-image:url('/Style Library/Concept/i/assets/act.png');
+}
+
+.actionpub:hover{
+background-image:url('/Style Library/Concept/i/assets/act_h.png');
+}
+
+.titan{
+background-image:url('/Style Library/Concept/i/assets/ti.png');
+}
+
+.titan:hover{
+background-image:url('/Style Library/Concept/i/assets/ti_h.png');
+}
+
+.spspub{
+background-image:url('/Style Library/Concept/i/assets/spspub.png');
+}
+
+.spspub:hover{
+background-image:url('/Style Library/Concept/i/assets/spspub_h.png');
+}
+
+.spscrm{
+background-image:url('/Style Library/Concept/i/spscrm.png');
+}
+
+.spscrm:hover{
+background-image:url('/Style Library/Concept/i/spscrm_h.png');
+}
+
+.lloyd{
+background-image:url('/Style Library/Concept/i/assets/lloyd.png');
+}
+
+.lloyd:hover{
+background-image:url('/Style Library/Concept/i/assets/lloyd_h.png');
+}
+
+.marsh{
+background-image:url('/Style Library/Concept/i/assets/marsh_nohover.png');
+}
+
+.marsh:hover{
+background-image:url('/Style Library/Concept/i/assets/marshthumb.png');
+}
+
+.gotham{
+background-image:url('/Style Library/Concept/i/assets/gotham_nh.png');
+}
+
+.gotham:hover{
+background-image:url('/Style Library/Concept/i/assets/gotham_h.png');
+}
+
+.uhc{
+background-image:url('/Style Library/Concept/i/assets/uhc_nh.png');
+}
+
+.uhc:hover{
+background-image:url('/Style Library/Concept/i/assets/uhc_h.png');
+}
+
+.halo{
+background-image:url('/Style Library/Concept/i/assets/halo_nh.png');
+}
+
+.halo:hover{
+background-image:url('/Style Library/Concept/i/assets/halo_h.png');
+}
+
+.generic{
+background-image:url('/Style Library/Concept/i/assets/generic_noh.png');
+}
+
+.generic:hover{
+background-image:url('/Style Library/Concept/i/assets/generic_h.png');
+}
+
+.minimal{
+background-image:url('/Style Library/Concept/i/assets/minimal_noh.png');
+}
+
+.minimal:hover{
+background-image:url('/Style Library/Concept/i/assets/minimal_h.png');
+}
+
+.casa{
+background-image:url('/Style Library/Concept/i/assets/casa_noh.png');	
+}
+
+.casa:hover{
+background-image:url('/Style Library/Concept/i/assets/casa_h.png');	
+}
+
+.stansec{
+background-image:url('/Style Library/Concept/i/assets/stansec.png');
+}
+
+.stansec:hover{
+background-image:url('/Style Library/Concept/i/assets/stansec_h.png');	
+}
+
+.daniel{
+background-image:url('/Style Library/Concept/i/assets/daniel.png');
+}
+
+.daniel:hover{
+background-image:url('/Style Library/Concept/i/assets/daniel_h.png');	
+}
+
+.lemcor{
+background-image:url('/Style Library/Concept/i/assets/lemcor_nh.png');
+}
+
+.lemcor:hover{
+background-image:url('/Style Library/Concept/i/assets/lemcor_h.png');	
+}
+
+
+
+.filters .filter a {
+float:left;
+display:block;
+padding:5px;
+margin-right:20px;
+font-size:11px;
+text-transform:uppercase;
+outline:none;
+}
+
+.toys, .lloyd, .nov, .macy, .wops, .trade, .leon,.fusionpub,.actionpub,.spspub,.titan,.lemcor,.comp,.cloud,.stansec,.ten,.lloyd,.fusionteam,.daniel,.spscrm,.casa,.marsh,.gotham,.uhc,.halo,.generic,.minimal {
+margin: 10px;
+display:block;
+height:200px;
+width:200px;
+
+}

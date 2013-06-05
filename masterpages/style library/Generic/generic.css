@@ -1,0 +1,741 @@
+﻿body{
+	background-color:rgb(238, 238, 238);
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+::selection			{ background:#c3effd; color:#000; /* Safari and Opera */ }
+::-moz-selection  { background:#c3effd; color:#000; /* Firefox */ }
+
+.s4-ca{
+width: 84%;
+float: left;
+background-color: white;
+border: 1px solid lightgrey;
+border-radius: 5px;
+}
+
+#s4-titlerow{
+background:#FFFFFF;
+}
+
+.ms-dlgTitle{
+	background-color:#205197;
+	background-repeat:repeat;
+	border-bottom:2px solid #293b46;
+}
+
+.ms-acal-apanel-title span{
+	color:white;
+}
+
+body #s4-topheader2{
+	background: transparent;
+	border:0;
+	min-height:0;
+	float:left;
+}
+
+a.ms-imglibPreviewTitle{
+	color:white;
+}
+
+#ImgPreviewTable td{
+	color:#e85c2c;
+}
+.ms-titlerowborder{
+	border-right:0px;
+}
+
+
+#s4-titlerow{
+	overflow: visible;
+	height: 100px;
+}
+
+.s4-title{
+	float:none;
+	width: 1080px;
+	margin: 0 auto;
+}
+
+.s4-toplinks{
+	padding-top:0px;
+	background-color:rgb(119, 197, 181);
+	height:39px;
+	margin-top:0px;
+border-bottom:1px solid rgb(38, 109, 89);
+border-top: 1px solid rgb(97, 97, 97);
+}
+
+.s4-toplinks .menu-horizontal{
+height:39px;
+float: left;
+}
+
+
+.s4-tn{
+	width:1080px;
+	margin:0 auto;
+}
+
+.s4-widecontentarea{
+	width:960px;
+	float:none !important;
+	margin:0 auto;
+	margin-top: 15px;
+}
+
+.slogan{
+float: left;
+font: 18px "Trebuchet MS";
+color: #999999;
+font-style: italic;
+width: 500px;
+margin: 65px 0 0 20px;	
+}
+
+
+
+
+a:visited{
+color:#0072BC;
+}
+
+.s4-specialNavLinkList a{
+margin-left:0px;
+}
+
+a:hover{
+text-decoration:none !important;
+}
+
+
+.ms-titlerowborder{
+border:0;
+}
+
+.s4-title{
+background:transparent;
+}
+
+html.ms-dialog #s4-leftpanel{
+display:none;
+}
+
+.ms-dlgTitle{
+background-color:#003B79;
+}
+
+body #s4-ribbonrow{
+background-color:rgb(204, 204, 204);
+border-bottom: 1px solid rgb(226, 226, 226);
+}
+
+
+body #s4-leftpanel-content{
+background-repeat:repeat-x;
+background-position:bottom;
+border: 1px solid rgb(153, 161, 165);
+border-top-width: 0px;
+border-right-width: 2px;
+border-bottom-width: 2px;
+border-left-width:0px;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.s4-titlelogo{
+float:left;
+text-align:left;
+padding:0px;
+}
+
+.s4-toplinks .s4-tn a.selected {
+background:transparent !important;
+color: #FFFFFF !important;
+border-right: 2px solid rgb(47, 104, 95) !important;
+border-top: 1px solid white;
+border-bottom: 1px solid rgb(47, 104, 95) !important;
+margin: 0px;
+padding: 12px 25px 10px 25px !important;
+}
+
+.selectedFix{
+border-top: 1px solid rgb(177, 148, 75) !important;
+padding: 12px 25px 12px 25px !important;
+background-color:rgb(230, 225, 167);
+}
+
+.s4-toplinks .s4-tn a.selected:hover{
+	text-decoration:underline;
+}
+
+.s4-toplinks .s4-tn a:hover{
+text-decoration:underline;
+}
+
+.boxes{
+width:400px;
+margin:0 auto;
+}
+
+.box{
+width:100%;
+display:block;
+float:left;
+color:white;
+padding:10px;
+}
+
+.insurance{
+background-color: #42B3E5;
+}
+
+.records{
+background-color: #0384CE;
+}
+
+.billpay{
+background-color: #3156A3;
+}
+
+.menu .menu-item, .menu .menu-item .additional-background, .menu .menu-item .additional-background .menu-item-text{
+font-weight:bold;
+}
+
+.s4-tn li.static > a:hover{
+color: rgb(119, 197, 181) !important;
+background:black;
+
+}
+
+
+.s4-ql ul.root ul > li:hover{
+color: rgb(119, 197, 181) !important;
+background-color:rgb(230, 225, 167) !important;
+
+}
+
+.s4-tn li.static > .menu-item {
+padding: 0px;
+padding:12px 25px;
+font: bold 14px Arial;
+color: #FFFFFF;
+border:0px;
+transition:color 0.5s,background-color 0.5s;
+-webkit-transition:color 0.5s,background-color 0.5s;
+-moz-transition:color 0.5s,background-color 0.5s;
+-o-transition:color 0.5s,background-color 0.5s;
+cursor:pointer;
+border-top: 1px solid rgb(181, 248, 237);
+border-bottom:1px solid white;
+border-left:1px solid white;
+border-right:0px;
+border-bottom:0px;
+
+border-right: 2px solid rgb(47, 104, 95) !important;
+border-top: 1px solid white;
+border-bottom: 1px solid rgb(47, 104, 95) !important;
+margin: 0px;
+padding: 12px 25px 10px 25px !important;
+}
+
+
+.s4-tn li.static > .menu-item:last-child{
+border-right:1px solid white;
+}
+
+.s4-tn li.static > .menu-item:hover{
+color: rgb(119, 197, 181);
+background-color:rgb(230, 225, 167) !important;
+}
+
+.s4-tn ul.dynamic{
+padding:5px 0px 5px 0px;
+width:99%;
+background-color:rgb(230, 225, 167);
+border:2px solid white !important;
+-webkit-border-radius: 0px 0px 20px 20px;
+border-radius: 0px 0px 20px 20px;
+} 
+
+.s4-tn li.dynamic > .menu-item{
+	font: bold 12px Arial;
+	color: #000000;
+	transition:color 0.5s;
+	-webkit-transition:color 0.5s;
+	-moz-transition:color 0.5s;
+	-o-transition:color 0.5s;
+}
+
+.s4-tn li.dynamic > .menu-item:hover{
+color: rgb(119, 197, 181) !important;
+background:transparent;
+text-decoration:underline;
+}
+
+
+
+.ms-cui-topBar2,.ms-cui-topBar1{
+border-color:#39679b;
+}
+
+.s4-search .ms-sbtable-ex{
+margin-top:6px;
+}
+
+.s4-help{
+margin-top:8px;
+}
+
+
+
+.s4-ql ul.root ul > li > a{
+padding:0 0 0 18px;
+}
+.s4-specialNavLinkList{
+border:0;
+}
+
+.s4-ca{
+	margin-left:0px;
+}
+
+
+
+/*Hides*/
+.s4-titletext{
+display:none;
+}
+
+.s4-clust s4-specialNavIcon{
+display:none;
+}
+
+/*WebPart Pages*/
+.s4-wpTopTable{
+	margin:0 auto;
+}
+
+
+/*Ribbon Fixes*/
+
+/*Ribbon Hover fixes*/
+.ms-siteactionsmenuhover{
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-siteactionsmenuinner{
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-welcomeMenu.ms-SpLinkButtonActive {
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-qatbutton{
+background-image: none !important;
+background-color: transparent !important;
+border-color: transparent !important;
+}
+
+.s4-breadcrumb-anchor{
+background-image: none !important;
+background-color: transparent !important;
+border-color: transparent !important;
+}
+
+.ms-WPTitle, .ms-WPTitle a {
+color: #FFFFFF;
+text-transform: uppercase;
+font-size: 15px;
+}
+
+.headertitle, .headertitle a, .headertitle a:link{
+text-transform:uppercase;
+color:#FFFFFF !important;
+}
+
+.ms-vb a:visited, .ms-vb2 a:visited, .ms-vb-user a:visited{
+color:#039 !important;
+}
+
+.in,.out{
+float:right;
+}
+
+.out{
+display:none;
+}
+
+
+#s4-topheader2 .s4-search input.ms-sbplain {
+background-image: none;
+border: 1px solid #acc !important;
+font: normal 12px Arial, Helvetica, sans-serif;
+padding: 2px 0px 2px 5px;
+width:200px !important;
+margin-right:10px;
+-webkit-border-radius: 20px 20px 20px 20px;
+border-radius: 20px 20px 20px 20px;
+transition:background-color 0.5s;
+-webkit-transition:background-color 0.5s;
+-o-transition:background-color 0.5s;
+-moz-transition:background-color 0.5s;
+}
+
+#s4-topheader2 .s4-search input.ms-sbplain:hover{
+	
+background-color:rgb(233, 233, 233);
+}
+
+#s4-topheader2 .s4-search input.ms-sbplain:focus{
+	background-color:rgb(206, 241, 239);
+}
+
+#s4-topheader2 .ms-sbgo a img {
+display: none;
+}
+
+#s4-topheader2 .ms-sbgo a{
+display: block;
+width: 33px;
+height: 28px;
+background-image:url('/Style%20Library/Generic/i/search.png');
+background-color: transparent;
+background-repeat: no-repeat;
+background-position: 0 0;
+transition:0.5s background-position;
+-webkit-transition:0.5s background-position;
+}
+
+#s4-topheader2 .ms-sbgo a:hover{
+background-position:0 -30px;
+}
+
+#s4-topheader2 .input.s4-searchbox-QueryPrompt{
+font-style: normal;
+}
+
+#s4-topheader2 .s4-search .ms-sbtable-ex {
+margin-top: 6px;
+background-color: transparent;
+border: 0px solid rgb(1, 109, 109);
+}
+
+#s4-topheader2 .s4-rp{
+margin-top: 2px;
+float: left;
+margin-left: 44px;
+}
+
+.s4-help{
+display:none;
+}
+
+.menu-horizontal a.dynamic-children span.additional-background, .menu-horizontal span.dynamic-children span.additional-background{
+padding-right:0px;
+background-image:none;
+}
+
+body #s4-leftpanel-content{
+background-color: rgb(255, 241, 184);
+}
+
+body #s4-leftpanel{
+background-color:white;
+}
+
+.ms-WPBorder, .ms-WPBorderBorderOnly{
+border:0px;
+}
+
+.ms-WPBody a:link{
+color: rgb(4, 68, 126);
+text-decoration: none;
+font-weight: bold;
+}
+
+.ms-WPBody a:visited{
+color: rgb(4, 68, 126);
+text-decoration: none;
+font-weight: bold;
+}
+
+.description{
+margin-left:10px;
+}
+
+.s4-ql a.selected{
+background: transparent;
+background-color: transparent;
+border-color: transparent !important;
+border-top-color: transparent !important;
+border-width: 1px !important;
+padding-left: 0px !important;
+margin-right:40px !important;
+color: #e85c2c !important;
+}
+
+#s4-leftpanel li{
+	transition:all 0.5s;
+-webkit-transition:all 0.5s;
+-o-transition:all 0.5s;
+-moz-transition:all 0.5s;
+
+}
+
+.s4-ql a.selected:hover{
+color:#FFCC99;
+}
+
+.ms-acal-apanel-title span{
+	color:black;
+}
+.s4-ql ul.root ul > li > a {
+padding: 5px 0px 5px 18px;
+color:rgb(71, 70, 70);
+transition:all 0.5s;
+-webkit-transition:all 0.5s;
+-o-transition:all 0.5s;
+-moz-transition:all 0.5s;
+}
+
+.ms-vb a:link, .ms-vb2 a:link, .ms-vb-user a:link{
+color:#000;
+}
+
+.ms-WPHeader td, .ms-fakewptitle {
+border-bottom: 0px;
+border-collapse: collapse;
+background-color:#858585;
+height:32px;
+}
+
+.ms-WPTitle, .ms-WPTitle a{
+color:#FFFFFF !important;
+font-size:15px;
+text-transform:none;
+font-family:Arial, Helvetica, sans-serif;
+font-weight:bold;
+margin-left:0px;
+padding:0px;
+}
+
+body.v4master{
+overflow:auto !important;
+}
+
+body #s4-workspace{
+overflow:auto;
+}
+
+.ms-WPHeader{
+background-color:transparent;
+}
+
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited {
+color: rgb(119, 197, 181);
+font-weight: bold;
+text-transform: none;
+text-align: left;
+padding: 5px;
+margin-top: 0px;
+border-width: 0px;
+font-family: tahoma;
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 3px 4px 4px 10px;
+border-width: 1px 0px;
+border-style: solid;
+border-color: transparent;
+overflow-x: hidden;
+display: block;
+zoom: 1;
+text-align: right;
+text-transform: none;
+}
+
+body #s4-leftpanel {
+background-color: transparent;
+transition:all 05s;
+-webkit-transition:all 0.5s;
+-o-transition:all 0.5s;
+-moz-transition:all 0.5s;
+border-radius: 10px;
+-webkit-border-radius: 10px;
+
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 5px 0px 5px 18px;
+color: black;
+font-weight: normal;
+font-family: tahoma;
+margin-right:10px;
+transition:all 05s;
+-webkit-transition:all 0.5s;
+-o-transition:all 0.5s;
+-moz-transition:all 0.5s;
+}
+
+.s4-ql ul.root ul > li > a :hover,.s4-ql ul.root ul > li > a:hover{
+color: #e85c2c;
+}
+
+.s4-ql ul.root ul > li > a:hover{
+	margin-right:15px;
+}
+
+.s4-specialNavLinkList{
+display:none;
+}
+
+.ms-quickLaunch{
+padding-top:0px;
+}
+
+body #s4-leftpanel-content{
+padding-bottom:0px;
+}
+
+.s4-ql, .s4-specialNavLinkList{
+margin:0px;
+}
+
+#s4-leftpanel{
+display:block;
+float:right !important;
+width:14% !important;
+background-color: white;
+border: 1px solid lightgrey;
+margin-top:15px;
+}
+
+#secondary-navigation {
+float: right;
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+}
+
+#secondary-navigation ul{
+margin: 0px 0px 20px 12px;
+list-style:none;
+}
+
+#secondary-navigation li {
+float: left;
+background: url('/Style%20Library/Generic/i/secondary-navigation-bg.gif') top center no-repeat;
+line-height: 28px;
+}
+
+#secondary-navigation li.msds a {
+color: #e11;
+font-weight: bold;
+}
+
+#secondary-navigation li a {
+text-decoration: none;
+padding: 0 1em;
+color: #205197;
+}
+
+#secondary-navigation li.msds {
+background-position: 0 0;
+}
+
+#secondary-navigation li {
+line-height: 28px;
+}
+
+
+#secondary-navigation li.compounds-under-development {
+background-position: top right;
+}
+
+.s4-titletable{
+	width:auto;
+	float:left;
+}
+
+#s4-statusbarcontainer{
+	margin-top:38px;
+}
+
+.link-item a:visited, .link-item a:active,.link-item a{
+	color:black !important;
+}
+
+tr.ms-WPHeader td {
+/*background: #fb4f14;*/
+border-style: none; 
+}
+
+.s4-wpcell:hover .ms-WPHeader td, .s4-wpActive .ms-WPHeader td, .s4-wpcell .ms-WPSelected .ms-WPHeader td { 
+border-style: none; 
+} 
+
+tr.ms-WPHeader td.ms-wpTdSpace { 
+padding: 0;
+width: 27px;
+background: url('/Style%20Library/Generic/i/WBRight.png') no-repeat right top;
+}
+
+tr.ms-WPHeader td.ms-wpTdSpace:first-child {
+background: url('/Style%20Library/Generic/i/WBleft.png') no-repeat left top;
+}
+
+h3.ms-WPTitle { 
+color: #fff;
+font-weight: bold;
+}
+
+h3.ms-WPTitle a:link, h3.ms-WPTitle a:active, h3.ms-WPTitle a:visited, h3.ms-WPTitle a:hover { 
+color: #fff; 
+}
+
+.ms-wpContentDivSpace {
+margin: 0;
+background-color:white;
+}
+
+td.ms-WPBorder, td.ms-WPBorderBorderOnly { 
+border-color: #eee; 
+border-top-style: none;
+}
+
+#WebPartTitleWPQ4{
+	background-image:url('http://poc.mwc.ms/Style%20Library/Generic/i/Documents.png');
+	background-repeat:no-repeat;
+	background-position:center right;	
+}
+
+#WebPartTitleWPQ5{
+	background-image:url('http://poc.mwc.ms/Style%20Library/Generic/i/Out.png');
+	background-repeat:no-repeat;
+	background-position:center right;	
+}
+
+
+#WebPartTitleWPQ6{
+	background-image:url('http://poc.mwc.ms/Style%20Library/Generic/i/User.png');
+	background-repeat:no-repeat;
+	background-position:center right;	
+}
+
+#WebPartTitleWPQ3{
+	background-image:url('http://poc.mwc.ms/Style%20Library/Generic/i/Allvoices.png');
+	background-repeat:no-repeat;
+	background-position:center right;
+}
+

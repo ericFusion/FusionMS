@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sites>
+<link>
+<id>1</id>
+<title>Cloud Strategies</title>
+<category>Skills needed:</category>
+<skills>HTML, CSS, C#, Etc.</skills>
+<screenshot>/Style%20Library/Concept/i/ss_cloud.png</screenshot>
+<button>/Style%20Library/Concept/i/click_cs.png</button>
+<description>This would be the description for Cloud Strategies.</description>
+<more>http://poc.mwc.ms/Expenses/</more>
+</link>
+
+<link>
+<id>2</id>
+<title>Interaction</title>
+<category>Skills needed:</category>
+<skills>HTML, CSS, Etc.</skills>
+<screenshot>/Style%20Library/Concept/i/ss_Interaction.png</screenshot>
+<button>/Style%20Library/Concept/i/click_int.png</button>
+<description>This would be the description for Interaction.</description>
+<more>http://poc.mwc.ms/sites/interaction</more>
+</link>
+
+<link>
+<id>3</id>
+<title>Toys 'R' Us</title>
+<category>Skills needed:</category>
+<skills>HTML, CSS, Etc.</skills>
+<screenshot>/Style%20Library/Concept/i/ss_toys.png</screenshot>
+<button>/Style%20Library/Concept/i/click_toys.png</button>
+<description>This would be the description for Toys.</description>
+<more>http://poc.mwc.ms/toysrus/</more>
+</link>
+
+<link>
+<id>4</id>
+<title>Tradeweb</title>
+<category>Skills needed:</category>
+<skills>HTML, CSS, Etc.</skills>
+<screenshot>/Style%20Library/Concept/i/ss_tradeweb.png</screenshot>
+<button>/Style%20Library/Concept/i/click_trade.png</button>
+<description>This would be the description for Tradeweb.</description>
+<more>http://poc.mwc.ms/tradeweb/</more>
+</link>
+
+<link>
+<id>5</id>
+<title>Leon Medical Centers</title>
+<category>Skills needed:</category>
+<skills>HTML, CSS, Etc.</skills>
+<screenshot>/Style%20Library/Concept/i/ss_lmc.png</screenshot>
+<button>/Style%20Library/Concept/i/click_lmc.png</button>
+<description>This would be the description for LMC.</description>
+<more>http://poc.mwc.ms/lmc/</more>
+</link>
+
+<link>
+<id>6</id>
+<title>FusionMS Web Parts</title>
+<category>Skills needed:</category>
+<skills> C#, CSS, Javascript, jQuery</skills>
+<screenshot>/Style%20Library/Concept/i/ss_wp.png</screenshot>
+<button>/Style%20Library/Concept/i/click_wp.png</button>
+<description>This would be the description for FusionMS Web Parts.</description>
+<more>http://poc.mwc.ms/WebParts/</more>
+</link>
+
+
+</sites>

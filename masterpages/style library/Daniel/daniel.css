@@ -1,0 +1,716 @@
+﻿body{
+	background-color:#fefefe;
+	background-repeat:repeat-x;
+	background-position:bottom;
+	font-family:Arial, Helvetica, sans-serif;
+	background-image:url('/Style Library/Daniel/i/about.jpg');
+	background-repeat:no-repeat;
+	background-position:bottom right;
+}
+
+body #s4-bodyContainer{
+overflow:auto;
+/*overflow-x:hidden;*/
+min-height: 100%;
+height: 100%;
+}
+
+body #s4-mainarea{
+height:100%;
+}
+
+.propertysheet{
+	background:white;
+}
+.ms-menutoolbar{
+background:none;
+background-color: #452924;
+margin-top:20px;
+}
+
+#ctl00_MSO_ContentDiv{
+margin-left:10px;
+}
+
+.ms-standardheader{
+	color:black;
+}
+
+.ms-vb, .ms-vb2, .ms-vb-user, .ms-vb-tall, .ms-pb, .ms-pb-selected {
+color: rgb(43, 43, 43);
+vertical-align: top;
+}
+
+.ms-addnew{
+color: rgb(0, 0, 0) !important;
+font-weight: bold !important;
+text-transform: uppercase;
+text-decoration: underline;
+}
+
+#__gvctl00_PlaceHolderMain_rptrAnony__div,td table.ms-listviewtable{
+	background-color:white;
+}
+
+#ctl00_PlaceHolderMain_AnonySplitLine{
+	display:none;
+}
+
+.ms-vh, .ms-vh2, .ms-vh a, .ms-vh2 a {
+color: rgb(0, 0, 0);
+font-weight: bold;
+text-transform: uppercase;
+font-size: 14px;
+background-color: white;
+}
+
+.ms-menutoolbar a,.ms-listheaderlabel{
+color:white !important;
+}
+
+.ms-menutoolbar td td.ms-viewselector, .ms-menutoolbar td td.ms-viewselectorhover, .ms-toolbar td td.ms-viewselector, .ms-toolbar td td.ms-viewselectorhover, td.ms-viewselector{
+	background-color: rgb(148, 141, 141);
+}
+
+#ctl00_PlaceHolderMain_ctl01_SettingLinksV4{
+	background-color: white;
+margin-left: 30px;
+margin-top: 10px;
+}
+
+.s4-ca{
+	background-color:transparent;
+}
+
+
+.s4-socialdata-notif{
+	display:none;
+}
+
+.s4-pr{
+width:100% !important;
+}
+
+#s4-titlerow{
+	overflow:hidden;
+	background:#452924;
+	border-bottom: 0px solid #293b46;
+	border-top: 0px solid #334651;
+}
+
+.ms-viewlsts tr{
+background-color:white;
+}
+
+.ms-dlgTitle{
+	background-image:url('/Style%20Library/Daniel/i/bg-header.jpg');
+	background-repeat:repeat;
+	border-bottom:2px solid #293b46;
+}
+
+.ms-acal-apanel-title span{
+	color:white;
+}
+
+body #s4-topheader2{
+	background: #452924;
+	border:0;
+	min-height:0;
+}
+
+.s4-titletable,.s4-title{
+width:100%;
+padding:0px;
+}
+
+.address{
+float: right;
+margin-top: -35px;
+margin-right: 15%;
+color:#A87F52;
+font-weight:bold;
+}
+
+.address span{
+display:block;
+padding:0px;
+margin-top:-10px;
+}
+.s4-toplinks{
+display:none;
+}
+
+a.ms-imglibPreviewTitle{
+	color:white;
+}
+
+#ImgPreviewTable td{
+	color:#e85c2c;
+}
+.ms-titlerowborder{
+	border-right:0px;
+}
+
+.s4-tn ul.dynamic{
+	margin-top:-13px;
+	padding: 10px 15px 10px;
+}
+
+.s4-tn ul.dynamic a{
+	color:#486270;
+	margin-bottom:5px;
+	border-bottom:1px solid #E8E8E8;
+}
+
+.s4-ql a.selected{
+	background:transparent !important;
+	background-image:none !important;
+	color:#e85c2c !important;
+}
+.s4-tn ul.dynamic a:hover{
+	color:#e85c2c;
+	border-bottom:1px solid #E8E8E8;
+	background-color:transparent;
+}
+
+#s4-titlerow{
+	overflow: visible;
+	height: 115px;
+}
+
+.s4-title{
+	float:left;
+}
+
+.s4-toplinks{
+	padding-top:22px;
+}
+
+.s4-titlelogo img{
+	padding:0px;
+	border:0px solid #dee9ef !important;
+	background-color: transparent;
+}
+
+.s4-widecontentarea{
+	width:100%;
+	margin:0 auto;
+	margin-top:-3px;
+}
+
+
+
+
+a:visited{
+color:#0072BC;
+}
+
+.s4-specialNavLinkList a{
+margin-left:0px;
+}
+
+a:hover{
+text-decoration:none !important;
+}
+
+
+.ms-titlerowborder{
+border:0;
+}
+
+.s4-title{
+background:transparent;
+}
+
+html.ms-dialog #s4-leftpanel{
+display:none;
+}
+
+.ms-dlgTitle{
+background-color:#003B79;
+}
+
+body #s4-ribbonrow{
+background-color:#452924;
+border-bottom: 1px solid #FFFFFF;
+}
+
+
+body #s4-leftpanel-content{
+background-repeat:repeat-x;
+background-position:bottom;
+}
+
+.s4-titlelogo{
+float:left;
+text-align:left;
+margin-left:240px;
+}
+
+.s4-toplinks .s4-tn a.selected {
+background:#dee9ef;
+border:1px solid transparent;
+color: #4a6574 !important;
+margin: 0px;
+padding: 0px;
+}
+.s4-toplinks .s4-tn a:hover{
+color:white;
+}
+
+.boxes{
+width:400px;
+margin:0 auto;
+}
+
+.box{
+width:100%;
+display:block;
+float:left;
+color:white;
+padding:10px;
+}
+
+.insurance{
+background-color: #42B3E5;
+}
+
+.records{
+background-color: #0384CE;
+}
+
+.billpay{
+background-color: #3156A3;
+}
+
+.menu .menu-item, .menu .menu-item .additional-background, .menu .menu-item .additional-background .menu-item-text{
+font-weight:bold;
+}
+
+.s4-tn li.static > a:hover{
+color: #4a6574;
+background:transparent;
+text-decoration:none !important;
+}
+
+.selectedFix{
+background:#dee9ef !important;
+color:#4a6574 !important;
+}
+
+.s4-ql ul.root ul > li:hover{
+background:transparent;
+color: #4a6574;
+}
+
+.s4-tn li.static > .menu-item {
+padding: 5px;
+margin:15px;
+color:#FFFFFF;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+.boxlink span{
+font-size:22px;
+color:#e85c2c;
+}
+
+.boxlink:hover span{
+color:white;
+}
+.boxlink:hover{
+color:white!important;
+}
+
+.boxlink{
+float:right;
+color:rgb(228, 228, 228) !important;
+}
+
+#ctl00_m_g_fe0fe67f_2bbd_415b_bfa6_b0ca5711748b table{
+	width:100%;
+}
+.ms-quicklaunchheader a:hover{
+/* [ReplaceColor(themeColor:"Dark1")] */ color:#e85c2c !important;
+text-decoration:none;
+}
+
+.s4-tn li.static > .menu-item:hover{
+text-decoration:underline;
+}
+
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited{
+color:#000000 !important;
+font-weight:bold;
+background-color:transparent;
+text-align:right !important;
+padding:10px;
+border-bottom: 1px dotted rgb(97, 125, 146) !important;
+}
+
+.s4-ql ul.root > li > .menu-item:hover{
+background-color:transparent;
+color:#452924 !important;
+}
+
+.menu-item-text:hover{
+	color:#452924 !important;
+}
+
+.s4-ql ul.root ul > li > a{
+color:#FFFFFF;
+}
+
+.s4-wpcell-plain .s4-wpTopTable
+{
+overflow:hidden;	
+}
+
+.s4-wpcell-plain .s4-wpTopTable img{
+max-width:95%;	
+}
+
+.s4-specialNavLinkList a{
+color:#000000;
+font-weight:bold;
+margin-left:0px;
+}
+
+
+.dynamic{
+padding:5px;
+}
+
+.dynamic:hover{
+border-color:#d8d4b2 !important;
+}
+
+.ms-cui-topBar2,.ms-cui-topBar1{
+border-color:#39679b;
+}
+
+.s4-search .ms-sbtable-ex{
+margin-top:6px;
+}
+
+.s4-help{
+margin-top:8px;
+}
+
+.s4-ql ul.root ul{
+margin:0;
+}
+
+body #s4-leftpanel-content{
+border:0;
+}
+
+#s4-searcharea{
+display:none;
+}
+
+.s4-ql ul.root ul > li > a{
+padding:0 0 0 18px;
+}
+.s4-specialNavLinkList{
+border:0;
+}
+
+body #s4-leftpanel{
+min-height:100%;
+height:100%;
+text-transform:uppercase;
+width:25%;
+float:left;
+font-size:12px;
+margin-top:0px;
+margin-left:0%;
+}
+
+.s4-ca{
+position:relative;
+margin-left:0px;
+width:75%;
+float:left;
+}
+
+/*Hides*/
+.s4-titletext{
+display:none;
+}
+
+.s4-clust s4-specialNavIcon{
+display:none;
+}
+
+/*WebPart Pages*/
+.s4-wpTopTable{
+	margin:0 auto;
+}
+
+
+/*Ribbon Fixes*/
+
+/*Ribbon Hover fixes*/
+.ms-siteactionsmenuhover{
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-siteactionsmenuinner{
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-welcomeMenu.ms-SpLinkButtonActive {
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-qatbutton{
+background-image: none !important;
+background-color: transparent !important;
+border-color: transparent !important;
+}
+
+.s4-breadcrumb-anchor{
+background-image: none !important;
+background-color: transparent !important;
+border-color: transparent !important;
+}
+
+.ms-WPTitle, .ms-WPTitle a {
+color: rgb(0, 100, 56);
+text-transform: uppercase;
+font-size: 20px;
+}
+
+.headertitle, .headertitle a, .headertitle a:link{
+text-transform:uppercase;
+color:rgb(14, 44, 143) !important;
+}
+
+.ms-vb a:visited, .ms-vb2 a:visited, .ms-vb-user a:visited{
+color:#039 !important;
+}
+
+.in,.out{
+float:right;
+}
+
+.out{
+display:none;
+}
+
+.in img,.out img{
+border:0px;
+}
+
+#s4-topheader2 .s4-search input.ms-sbplain {
+background-image: none;
+border: 0px !important; /* the original code had !important so I need to use it here too!*/
+font: normal 12px Arial, Helvetica, sans-serif;
+padding: 5px 0px 5px 5px;
+}
+
+#s4-topheader2 .ms-sbgo a img {
+display: none;
+}
+
+#s4-topheader2 .ms-sbgo a{
+display: block;
+width: 25px;
+height: 25px;
+background-image:url('/Style Library/Gotham/i/Find.png');
+background-position: center center;
+}
+
+#s4-topheader2 .input.s4-searchbox-QueryPrompt{
+font-style: normal;
+}
+
+#s4-topheader2 .s4-search .ms-sbtable-ex {
+margin-top: 6px;
+background-color: rgb(235, 235, 235);
+border: 0px solid rgb(1, 109, 109);
+}
+
+#s4-topheader2 .s4-rp{
+margin-top:-18px;
+}
+
+.s4-help{
+display:none;
+}
+
+.menu-horizontal a.dynamic-children span.additional-background, .menu-horizontal span.dynamic-children span.additional-background{
+padding-right:0px;
+background-image:none;
+}
+
+body #s4-leftpanel-content{
+background-color:transparent;
+}
+
+body #s4-leftpanel{
+background-image: url('/Style%20Library/Daniel/i/page-bg.png');
+background-repeat:repeat;
+}
+
+.ms-WPBorder, .ms-WPBorderBorderOnly{
+border:0px;
+}
+
+.ms-WPBody{
+background-color: white;
+margin:0px;
+}
+
+.ms-WPBody a:link{
+color: rgb(4, 68, 126);
+text-decoration: none;
+font-weight: bold;
+}
+
+#WebPartctl00_m_g_3c866bd1_6baf_49ab_9179_aa0c379514c6{
+padding:0px !important;
+}
+
+#ctl00_m_g_3c866bd1_6baf_49ab_9179_aa0c379514c6 table{
+width:100%;
+}
+
+.ms-WPBody{
+font-size:11pt;
+padding:10px 0px 10px 10px;
+background-image: url('/Style%20Library/Daniel/i/page-bg.png');
+background-repeat:repeat;
+
+}
+.ms-WPBody a:visited{
+color: rgb(4, 68, 126);
+text-decoration: none;
+font-weight: bold;
+}
+
+.description{
+margin-left:10px;
+}
+
+.s4-ql a.selected{
+background: url("/_layouts/images/selbg.png") repeat-x left top;
+background-color: transparent;
+border-color: transparent !important;
+border-top-color: transparent !important;
+border-width: 1px !important;
+padding-left: 0px !important;
+margin-right:20px !important;
+}
+
+.s4-ql a.selected:hover{
+color:#FFCC99;
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 5px 0px 5px 18px;
+color:rgb(138, 129, 129);
+}
+
+.ms-vb a:link, .ms-vb2 a:link, .ms-vb-user a:link{
+color:#039;
+}
+
+.ms-WPHeader td, .ms-fakewptitle {
+border-bottom: 0px;
+border-collapse: collapse;
+background-color:#452924;
+border-bottom:1px dotted rgb(97, 125, 146);
+}
+
+.ms-WPTitle, .ms-WPTitle a{
+color:white !important;
+}
+
+body.v4master{
+overflow:auto !important;
+}
+
+body #s4-workspace{
+overflow: hidden;
+background: rgb(255, 250, 244);
+background-image: url('/Style Library/Daniel/i/about.jpg');
+background-repeat: no-repeat;
+background-position: bottom right;}
+
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited {
+color: rgb(240, 240, 240);
+font-weight: bold;
+text-transform: none;
+text-align: left;
+padding: 5px;
+margin-top: 0px;
+border-width: 0px;
+font-family: tahoma;
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 3px 4px 4px 10px;
+border-width: 1px 0px;
+border-style: solid;
+border-color: transparent;
+overflow-x: hidden;
+display: block;
+zoom: 1;
+text-align: right;
+text-transform: none;
+text-transform:uppercase;
+}
+
+#s4-leftpanel-content{
+padding-top:20px !important;
+}
+
+body #s4-leftpanel {
+background-color: rgb(34, 43, 68);
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 5px 0px 5px 18px;
+font-weight: normal;
+font-family: tahoma;
+margin-right:10px;
+}
+
+.s4-ql ul.root ul > li > a :hover,.s4-ql ul.root ul > li > a:hover{
+color: black;
+}
+
+.s4-specialNavLinkList{
+display:none;
+}
+
+
+.ms-quickLaunch{
+padding-top:0px;
+}
+
+body #s4-leftpanel-content{
+padding-bottom:0px;
+}
+
+.s4-ql, .s4-specialNavLinkList{
+margin:0px;
+}
+
+#ctl00_m_g_e223250a_4337_4a9a_8dcd_ac81708d3397 table:nth-child(1),#ctl00_m_g_00bc3bcb_563b_4397_9a3c_65e98389aec7 table:nth-child(1){
+margin:0 auto;
+}
+
+

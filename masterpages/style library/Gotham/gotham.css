@@ -1,0 +1,453 @@
+﻿a:visited{
+color:#0072BC;
+}
+
+.s4-specialNavLinkList a{
+margin-left:0px;
+}
+
+a:hover{
+text-decoration:none !important;
+}
+
+
+.ms-titlerowborder{
+border:0;
+}
+
+.s4-title{
+background:transparent;
+}
+
+html.ms-dialog #s4-leftpanel{
+display:none;
+}
+
+.ms-dlgTitle{
+background-color:#003B79;
+}
+
+body #s4-ribbonrow{
+background-color:rgb(10, 68, 88);
+}
+
+
+body #s4-leftpanel-content{
+background-repeat:repeat-x;
+background-position:bottom;
+}
+
+.s4-titlelogo{
+float:left;
+text-align:left;
+}
+
+.s4-toplinks .s4-tn a.selected {
+background:#FFFFFF;
+border:1px solid transparent;
+color: #000000 !important;
+margin: 0px;
+padding: 0px;
+}
+.s4-toplinks .s4-tn a:hover{
+color:rgb(233, 213, 177) !important
+}
+
+.menu .menu-item, .menu .menu-item .additional-background, .menu .menu-item .additional-background .menu-item-text{
+font-weight:bold;
+}
+
+.s4-tn li.static > a:hover{
+color:white;
+text-decoration:underline !important;
+}
+
+.s4-ql ul.root ul > li:hover{
+background-color:white;
+color:black;
+}
+
+.s4-tn li.static > .menu-item {
+padding: 7px 20px;
+color:#FFFFFF;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+.s4-tn li.static > .menu-item:hover{
+text-decoration:underline;
+}
+
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited{
+color:#02367F;
+font-weight:bold;
+}
+
+.s4-ql ul.root ul > li > a{
+color:#FFFFFF;
+}
+
+.s4-wpcell-plain .s4-wpTopTable
+{
+overflow:hidden;	
+}
+
+.s4-wpcell-plain .s4-wpTopTable img{
+max-width:95%;	
+}
+
+.s4-ql ul.root ul > li > a:hover{
+color:#000000;
+}
+
+.s4-specialNavLinkList a{
+color:#000000;
+font-weight:bold;
+margin-left:0px;
+}
+
+body #s4-topheader2{
+background: rgb(34, 43, 68);
+border:0;
+min-height:0;
+border-bottom: 5px solid rgb(216, 213, 178);
+}
+
+.dynamic{
+padding:5px;
+}
+
+.dynamic:hover{
+border-color:#d8d4b2 !important;
+}
+
+
+.ms-cui-topBar2,.ms-cui-topBar1{
+border-color:#39679b;
+}
+
+.s4-search .ms-sbtable-ex{
+margin-top:6px;
+}
+
+.s4-help{
+margin-top:8px;
+}
+
+.s4-ql ul.root ul{
+margin:0;
+}
+
+body #s4-leftpanel-content{
+border:0;
+}
+
+.s4-ql ul.root ul > li > a{
+	padding:0 0 0 18px;
+}
+.s4-specialNavLinkList{
+border:0;
+}
+
+body #s4-leftpanel{
+text-transform:uppercase;
+width:14%;
+float:left;
+font-size:12px;
+border: 8px solid rgb(7, 60, 49);
+margin-top:10px;
+margin-left:1%;
+}
+
+.s4-ca{
+position:relative;
+margin-left:0px;
+width:82%;
+float:left;
+}
+
+/*Hides*/
+.s4-titletext{
+display:none;
+}
+
+.s4-clust s4-specialNavIcon{
+display:none;
+}
+
+/*WebPart Pages*/
+.s4-wpTopTable{
+	margin:0 auto;
+}
+
+
+/*Ribbon Fixes*/
+
+/*Ribbon Hover fixes*/
+.ms-siteactionsmenuhover{
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-siteactionsmenuinner{
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-welcomeMenu.ms-SpLinkButtonActive {
+border-color: transparent !important;
+border-top-color: transparent !important;
+background: transparent !important;
+background-color: transparent !important;
+}
+
+.ms-qatbutton{
+background-image: none !important;
+background-color: transparent !important;
+border-color: transparent !important;
+}
+
+.s4-breadcrumb-anchor{
+background-image: none !important;
+background-color: transparent !important;
+border-color: transparent !important;
+}
+
+.ms-WPTitle, .ms-WPTitle a {
+color: rgb(39, 67, 145);
+text-transform: uppercase;
+font-size: 20px;
+}
+
+.headertitle, .headertitle a, .headertitle a:link{
+text-transform:uppercase;
+color:rgb(14, 44, 143) !important;
+}
+
+.ms-vb a:visited, .ms-vb2 a:visited, .ms-vb-user a:visited{
+color:#039 !important;
+}
+
+.in,.out{
+float:right;
+}
+
+.out{
+display:none;
+}
+
+.in img,.out img{
+border:0px;
+}
+
+.s4-title-inner .s4-search input.ms-sbplain {
+background-image: none;
+background-color: transparent;
+border: 0px !important; /* the original code had !important so I need to use it here too!*/
+font: normal 12px Arial, Helvetica, sans-serif;
+padding: 5px 0px 5px 5px;
+}
+
+.s4-title-inner .ms-sbgo a img {
+display: none;
+}
+
+.s4-title-inner .ms-sbgo a{
+display: block;
+width: 25px;
+height: 25px;
+background-image:url('/Style Library/Gotham/i/Find.png');
+background-position: center center;
+}
+
+.s4-title-inner .input.s4-searchbox-QueryPrompt{
+font-style: normal;
+}
+
+.s4-title-inner .s4-search .ms-sbtable-ex {
+margin-top: 6px;
+background-color: rgb(235, 235, 235);
+border: 1px solid rgb(1, 109, 109);
+}
+
+.s4-help{
+display:none;
+}
+
+.menu-horizontal a.dynamic-children span.additional-background, .menu-horizontal span.dynamic-children span.additional-background{
+padding-right:0px;
+background-image:none;
+}
+
+body #s4-leftpanel-content{
+background-color:transparent;
+}
+
+body #s4-leftpanel{
+background-color:rgb(224, 224, 224);
+}
+
+.ms-WPBorder, .ms-WPBorderBorderOnly{
+border:0px;
+}
+
+.ms-WPBody a:link{
+color: rgb(4, 68, 126);
+text-decoration: none;
+font-weight: bold;
+}
+
+.ms-WPBody a:visited{
+color: rgb(4, 68, 126);
+text-decoration: none;
+font-weight: bold;
+}
+
+.description{
+margin-left:10px;
+}
+
+.s4-ql a.selected{
+background: url("/_layouts/images/selbg.png") repeat-x left top;
+background-color: rgb(8, 83, 71);
+border-color: transparent !important;
+border-top-color: transparent !important;
+border-width: 1px !important;
+padding-left: 9px !important;
+color: rgb(248, 248, 248) !important;
+margin-right:0px !important;
+}
+
+.s4-ql a.selected:hover{
+color:#FFCC99;
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 5px 0px 5px 18px;
+color:rgb(71, 70, 70);
+}
+
+.ms-vb a:link, .ms-vb2 a:link, .ms-vb-user a:link{
+color:#039;
+}
+
+.ms-WPHeader td, .ms-fakewptitle {
+border-bottom: 0px;
+border-collapse: collapse;
+background-color: rgb(233, 226, 187);
+}
+
+body.v4master{
+overflow:auto !important;
+}
+
+body #s4-workspace{
+overflow:auto;
+}
+
+body #s4-leftpanel{
+margin-top:0px;
+margin-left:0px;
+border:0px;
+}
+
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited {
+color: rgb(240, 240, 240);
+font-weight: bold;
+text-transform: none;
+text-align: left;
+background-color: rgb(167, 163, 120);
+padding: 5px;
+margin-top: 0px;
+border-width: 0px;
+font-family: tahoma;
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 3px 4px 4px 10px;
+border-width: 1px 0px;
+border-style: solid;
+border-color: transparent;
+color: #3b4f65;
+overflow-x: hidden;
+display: block;
+zoom: 1;
+text-align: right;
+text-transform: none;
+}
+
+body #s4-leftpanel {
+background-color: rgb(34, 43, 68);
+}
+
+.s4-ql ul.root ul > li > a {
+padding: 5px 0px 5px 18px;
+color: rgb(255, 255, 255);
+font-weight: normal;
+font-family: tahoma;
+margin-right:10px;
+}
+
+.s4-specialNavLinkList{
+display:none;
+}
+
+.in,.out{
+width: 100%;
+float: right;
+text-align: right;
+background-color: rgb(167, 163, 120);
+}
+
+.ms-quickLaunch{
+padding-top:0px;
+}
+
+body #s4-leftpanel-content{
+padding-bottom:0px;
+}
+
+.s4-ql, .s4-specialNavLinkList{
+margin:0px;
+}
+
+#ctl00_m_g_e223250a_4337_4a9a_8dcd_ac81708d3397 table,#ctl00_m_g_00bc3bcb_563b_4397_9a3c_65e98389aec7 table{
+margin:0 auto;
+}
+
+#main {
+padding: 10px;
+background: rgb(128, 117, 117) !important;
+border: 1px solid #ccc;
+}
+
+.s4-titlelogo > img, .s4-titlelogo > a > img {
+vertical-align: middle;
+max-width: 200px;
+}
+
+.ms-WPHeader td, .ms-fakewptitle {
+border-bottom: 0px;
+border-collapse: collapse;
+background-color: rgb(167, 163, 120);
+}
+
+.ms-WPTitle, .ms-WPTitle a {
+color: rgb(255, 255, 255);
+text-transform: uppercase;
+font-size: 20px;
+}
+
+div.article, div.welcome {
+padding: 10px 10px;
+}
+
+.article-content, .welcome-content {
+margin: 0px 0 0;
+color: #666666;
+display:none;
+}

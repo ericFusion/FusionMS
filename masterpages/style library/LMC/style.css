@@ -1,0 +1,358 @@
+﻿/****************************************************
+	Leon Medical Center SharePoint 2010 Masterpage
+	Author : Eric Barber
+	Start Date : 08/21/2012
+	End Date : N/A
+	Notes: To be used in conjuction with LMC.master
+	Tested in IE7-9, Chrome, Safari, Opera, and Firefox
+****************************************************/
+/*Base Style*/
+html,body{
+	background:#D1DEE8;
+	background-image:url('images/bg.png');
+	background-size:cover;
+	background-repeat:no-repeat;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.900em; /*14px*/
+	color:#000000;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+	-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../Style Library/LMC/images/bg.png', sizingMethod='scale')"; /*Using Filter causes IE7 to break CSS*/
+}
+::selection {
+	background: #FAB060;/* Safari, Chrome */
+	}
+::-moz-selection {
+	background: #FAB060; /* Firefox */
+}
+/*End Base Style*/
+
+
+/*Ribbon*/
+body #s4-ribbonrow{
+	background-color:#FFFFFF!important;
+	background-image:url('images/ribbonbg.png');
+	background-repeat:repeat-y;
+	border-bottom:2px solid #007AC2;
+}
+#s4-ribbonrow span,#s4-ribbonrow a{
+	color:#000000;
+}
+.ms-siteactionsmenuhover{
+	border-color:transparent;
+	background:transparent;
+	background-color:transparent;
+}
+.ms-siteactionsmenuhover span:hover{
+	text-decoration:underline;
+}
+.s4-breadcrumb-anchor:hover,.s4-breadcrumb-anchor-open,.ms-qatbutton:hover{
+	border-color:transparent;
+	background:transparent;
+	background-color:transparent;
+	border-bottom:2px solid #000000;
+}
+.ms-welcomeMenu.ms-SpLinkButtonActive{
+	border-color:transparent;
+	background:transparent;
+	background-color:transparent;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+}
+.ms-welcomeMenu.ms-SpLinkButtonActive span:hover{
+	text-decoration:underline;
+}
+/*End Ribbon*/
+
+
+/*Header*/
+.s4-title{
+	background-image:none;
+	background-color:#FFFFFF;
+}
+.s4-title h1, .s4-title h2{
+	font-family: 'Mate SC', serif;
+}
+.s4-title h1{
+	font-size:20px;
+}
+.s4-title h2{
+	font-size:18px;
+}
+/*End Header*/
+
+
+/*Top Navigation*/
+body #s4-topheader2{
+	background:url('images/navsprite.png')!important;
+	background-position: 0px 0px;
+	background-repeat:repeat-x;
+	height:30px!important;
+	border-bottom:1px solid #484242!important;
+}
+.s4-tn li.static > .menu-item{
+	padding:7px 12px!important;
+	margin:0px 0px!important;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+	background:url('images/navsprite.png');
+	background-position: 0px -1px;
+	background-repeat:repeat-x;
+	border-bottom:1px solid #484242;
+	border-left:1px solid #7E7E7E;
+	border-right:1px solid #7E7E7E;
+}
+.s4-tn li.static > .menu-item:hover{
+	border-left:solid 1px #5C5B5B;
+	border-right: solid 1px #5C5B5B;
+	background: url("images/navsprite.png");
+	background-position: 0px -37px;
+	padding:7px 12px;
+}
+.s4-toplinks .s4-tn a.selected {
+	border-color: transparent!important;
+	border-bottom-color: transparent!important;
+	border-top-color: transparent!important;
+	background: url("images/navsprite.png")!important;
+	background-color: transparent!important;
+	background-position: 0px -37px!important;
+	color: #003759!important;
+	padding: 0px!important;
+	border-left:solid 1px #5C5B5B!important;
+	border-right: solid 1px #5C5B5B!important;
+	padding:7px 12px!important;
+	font-weight:bold!important;
+}
+.s4-toplinks a{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	color:#FFFFFF !important;
+	text-decoration:none !important;
+	text-transform:uppercase;
+}
+/*End Top Navigation*/
+
+
+/*Main Body & Container*/
+.s4-ba{
+	margin-bottom:30px !important;
+	padding: 0px 0px 30px 0px !important;
+}
+.s4-ca{
+	border-radius:0px 0px 0px 32px;
+	margin-left:225px !important;
+	-webkit-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+	box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+}
+.ms-rteElement-H1B{
+	font-family: 'Mate SC', serif;
+}
+#s4-bodyContainer{
+	float:left!important;
+	clear:both!important;
+}
+/*End Main Body & Container*/
+
+/*Dialog Box Specific*/
+.ms-dlgTitle {
+	background-color: #AFAFAF;
+}
+html.ms-dialog .s4-ca{
+	border-radius:0px 0px 32px 32px;
+}
+html.ms-dialog #s4-bodyContainer{
+	float:none;
+	margin:0 auto;
+}
+.ms-dlgContent {
+	border: 1px solid #8B8C8D;
+}
+.ms-dlgBorder {
+	border: 1px solid #8B8C8D;
+}
+/*End Dialog Box Specific*/
+
+/*Charts, Lists, Libraries Styles*/
+.ms-listedit{
+	margin-left:0px;
+	margin-top:0px;
+}
+.ms-rteElement-H1B{
+	margin:0;
+}
+/*End Charts, Lists, Libraries Styles*/
+
+
+/*Quick Panel/Left Navigation*/
+body #s4-leftpanel-content{
+	background-color:transparent!important;
+	border:0px!important;
+}
+body #s4-leftpanel{
+	width: 200px!important;
+	float: left!important;
+	margin-left: 12px!important;
+}
+.s4-leftpanel-header img{
+	display:block;
+	margin:0 auto;
+}
+.s4-ql ul.root ul > li{
+	background-image: url('images/menubg.gif');
+	background-repeat:repeat-x;
+	border-top:1px solid transparent;
+	border-bottom:1px solid transparent;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+	padding-left:10px;
+}
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited{
+	background-image: url('images/menubg.gif');
+	background-repeat:repeat-x;
+	border-top:1px solid transparent;
+	border-bottom:1px solid transparent;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+	font-weight:bold;
+}
+.s4-ql ul.root ul > li > a{
+	color:#00529B;
+	transition:all 1s;
+	-o-transition:all 1s;
+	-moz-transition:all 1s;
+	-webkit-transition:all 1s;
+}
+.s4-ql ul.root > li > .menu-item:hover, .s4-qlheader:hover{
+	background-image:url('images/menuhover.gif');
+	background-repeat:repeat-x;
+	border-top:1px solid #DEDEDE;
+	border-bottom:1px solid #DEDEDE;
+	text-decoration:none;
+}
+.s4-ql ul.root ul > li:hover{
+	background-image:url('images/menuhover.gif');
+	background-repeat:repeat-x;
+	border-top:1px solid #DEDEDE;
+	border-bottom:1px solid #DEDEDE;
+}
+.s4-ql ul.root ul > li > a:hover{
+	color:#007AC2;
+	text-decoration:none;
+}
+.s4-specialNavLinkList{
+	border:0px!important;
+}
+.s4-ql ul.root ul{
+	margin:0px!important;
+}
+.s4-specialNavLinkList a {
+	background-image:url('images/btn.png');
+	background-position:0px 0px;
+	color:green;
+	display: block!important;
+	padding: 8px 4px 7px 10px!important;
+	margin:0px auto 5px auto!important;
+	width:170px!important;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #4D8324!important;
+	font-weight:bold;
+	font-size:10px;
+}
+.s4-specialNavLinkList a:hover {
+	background-position: -184px 0px;
+}
+.s4-specialNavLinkList a:hover span{
+	color:#00529B !important;
+	text-decoration:none !important;
+}
+/*End Quick Panel/Left Navigation*/
+
+/*Search*/
+#search{
+	display: block;
+	float: right;
+	width: 230px;
+	margin-top: -60px;
+	margin-right:20px;
+}
+#search > #s4-searcharea {
+    background-color:#F1F1F1;
+	background: url(images/searchbg.png) no-repeat scroll 0 0 transparent;
+	background-size:100% 100%;
+	width: 230px;
+	border:solid 1px #D2D2D2;
+	-webkit-border-radius: 2em;
+	border-radius: 2em;
+	height:35px;
+}
+#search .s4-search input.ms-sbplain {
+	background-image: none;
+	background-color: white;
+	border:solid 1px #BCBBBB !important;
+	font: normal 12px Arial, Helvetica, sans-serif;
+	padding: 5px 0px 5px 5px; 
+    margin-top:1px;
+    margin-left:2px;
+	-webkit-border-radius:2em;
+	border-radius:2em;
+    -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.2);
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .2);
+    color:#000000;
+    transition:all 1s;
+    -webkit-transition:all 1s;
+    -o-transition:all 1s;
+    -moz-transition:all 1s;
+}
+#search .s4-search input.ms-sbplain:focus {
+    background-color:#DEDEDE;
+    color:#333333;
+}
+#search .ms-sbgo a img {
+	display: none;
+}
+#search .ms-sbgo a {
+	display: block; 
+	width: 25px; 
+	height: 25px;
+}
+/*End Search*/
+
+
+/*Footer*/
+#footer{
+	height:35px;
+	background-image:url('images/topnavhover.png');
+	background-repeat:repeat-x;
+	clear:both;
+	display:none !important;
+}
+#footer span{
+	display:block;
+	text-align:left;
+	text-indent:5px;
+	color:#FFFFFF;
+	font-family:'Segoe UI', Arial, Helvetica, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+/*End Footer*/
+
+
+/*SharePoint 2010 Overrides & Hides*/
+.s4-help{
+	display:none;
+}
+/*End SharePoint 2010 Overrides & Hides*/

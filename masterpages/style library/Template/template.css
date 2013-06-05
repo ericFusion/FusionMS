@@ -1,0 +1,169 @@
+﻿/*******************************
+Tradeweb/Template Default Colors
+#00a3db - Navigation Bar
+#003b79 - Background Top Bar
+#FFFFFF - Navigation Text,Quickpanel LI, Navigation on highlight background
+#000000 - Navigation Text on Hightlight, Recycle Bin/All Site Content Text
+#02367f - Quickpanel Header LI
+#007bcf - Webpart Header Text
+#013068 - Ribbon
+
+Quick Panel Background located in /Style Library/Template/i/panelbg.png
+Logo located in /Style Library/Template/i/logo.png
+
+Layout
+Basic v4 based full width page, no heavy changes needed. Use SharePointV4_Commented_And_Corrections.master.
+*******************************/
+
+/***Template Styles***/
+
+a:hover{
+text-decoration:none !important;
+}
+
+body #s4-workspace{
+overflow:auto;
+}
+
+.ms-titlerowborder{
+border:0;
+}
+
+.s4-title{
+background:#003b79 !important;
+}
+
+html.ms-dialog #s4-leftpanel{
+display:none;
+}
+
+.ms-dlgTitle{
+background-color:#003B79;
+}
+
+body #s4-ribbonrow{
+background-color:#013068;
+}
+
+.s4-ql a.selected{
+	background:#FFFFFF !important;
+}
+
+#zz16_TopNavigationMenuV4,#zz18_TopNavigationMenuV4{
+background-color:#00a3db;
+font-size:12px;
+border-top:solid 1px #b9babe;
+border-bottom:solid 1px #b9babe;
+}
+
+body #s4-leftpanel-content{
+background:url('/Style Library/Template/i/panelbg.png');
+background-repeat:repeat-x;
+background-position:bottom;
+background-color:#19a8db !important;
+min-height:600px;
+}
+
+.s4-titlelogo{
+float:left;
+text-align:left;
+}
+
+.s4-toplinks .s4-tn a.selected {
+background:#FFFFFF;
+border:1px solid transparent;
+color: #000000 !important;
+margin: 0px;
+padding: 0px;
+}
+
+.menu .menu-item, .menu .menu-item .additional-background, .menu .menu-item .additional-background .menu-item-text{
+font-weight:bold;
+}
+
+.s4-tn li.static > a:hover{
+color:#000000;	
+}
+
+.s4-tn li.static > .menu-item {
+padding: 7px 20px;
+color:#FFFFFF;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+.s4-ql ul.root > li > .menu-item, .s4-qlheader, .s4-qlheader:visited{
+color:#02367F;
+font-weight:bold;
+}
+
+.s4-ql ul.root ul > li > a{
+color:#FFFFFF;
+}
+
+.s4-ql ul.root ul > li > a:hover{
+color:#000000;
+}
+
+.s4-specialNavLinkList a{
+color:#000000;
+font-weight:bold;
+margin-left:30px;
+}
+
+body #s4-topheader2{
+background:#00A3DB;
+border:0;
+min-height:0;
+}
+
+body #s4-leftpanel{
+text-transform:uppercase;
+width:200px;
+font-size:12px;
+}
+
+.ms-cui-topBar2,.ms-cui-topBar1{
+border-color:#39679b;
+}
+
+.s4-search .ms-sbtable-ex{
+margin-top:6px;
+}
+
+.s4-help{
+margin-top:8px;
+}
+
+.s4-ql ul.root ul{
+margin:0;
+}
+
+body #s4-leftpanel-content{
+border:0;
+}
+
+.s4-ql ul.root ul > li > a{
+	padding:0 0 0 18px;
+}
+.s4-specialNavLinkList{
+border:0;
+}
+
+.s4-ca{
+margin-left:200px;
+}
+
+/*Hides*/
+.s4-titletext{
+display:none;
+}
+
+.s4-clust s4-specialNavIcon{
+display:none;
+}
+
+/*WebPart Pages*/
+.s4-wpTopTable{
+	margin:0 auto;
+}
